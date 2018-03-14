@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6C7DB481C25532800246945 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB471C25532800246945 /* main.m */; };
+		A6C7DB4B1C25532800246945 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB4A1C25532800246945 /* AppDelegate.m */; };
+		A6C7DB4E1C25532800246945 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB4D1C25532800246945 /* ViewController.m */; };
+		A6C7DB511C25532800246945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C7DB4F1C25532800246945 /* Main.storyboard */; };
+		A6C7DB531C25532800246945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C7DB521C25532800246945 /* Assets.xcassets */; };
+		A6C7DB561C25532800246945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C7DB541C25532800246945 /* LaunchScreen.storyboard */; };
+		A6C7DB7D1C25534100246945 /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB5F1C25534100246945 /* SystemServices.m */; };
+		A6C7DB7E1C25534100246945 /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB621C25534100246945 /* SSAccelerometerInfo.m */; };
+		A6C7DB7F1C25534100246945 /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB641C25534100246945 /* SSAccessoryInfo.m */; };
+		A6C7DB801C25534100246945 /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB661C25534100246945 /* SSApplicationInfo.m */; };
+		A6C7DB811C25534100246945 /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB681C25534100246945 /* SSBatteryInfo.m */; };
+		A6C7DB821C25534100246945 /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB6A1C25534100246945 /* SSCarrierInfo.m */; };
+		A6C7DB831C25534100246945 /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB6C1C25534100246945 /* SSDiskInfo.m */; };
+		A6C7DB841C25534100246945 /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB6E1C25534100246945 /* SSHardwareInfo.m */; };
+		A6C7DB851C25534100246945 /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB701C25534100246945 /* SSJailbreakCheck.m */; };
+		A6C7DB861C25534100246945 /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB721C25534100246945 /* SSLocalizationInfo.m */; };
+		A6C7DB871C25534100246945 /* SSMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB741C25534100246945 /* SSMemoryInfo.m */; };
+		A6C7DB881C25534100246945 /* SSNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB761C25534100246945 /* SSNetworkInfo.m */; };
+		A6C7DB891C25534100246945 /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB781C25534100246945 /* SSProcessInfo.m */; };
+		A6C7DB8A1C25534100246945 /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB7A1C25534100246945 /* SSProcessorInfo.m */; };
+		A6C7DB8B1C25534100246945 /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7DB7C1C25534100246945 /* SSUUID.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A6C7DB431C25532800246945 /* 12-获取硬件信息.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "12-获取硬件信息.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C7DB471C25532800246945 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6C7DB491C25532800246945 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A6C7DB4A1C25532800246945 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A6C7DB4C1C25532800246945 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A6C7DB4D1C25532800246945 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A6C7DB501C25532800246945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6C7DB521C25532800246945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6C7DB551C25532800246945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6C7DB571C25532800246945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6C7DB5E1C25534100246945 /* SystemServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServices.h; sourceTree = "<group>"; };
+		A6C7DB5F1C25534100246945 /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServices.m; sourceTree = "<group>"; };
+		A6C7DB611C25534100246945 /* SSAccelerometerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccelerometerInfo.h; sourceTree = "<group>"; };
+		A6C7DB621C25534100246945 /* SSAccelerometerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccelerometerInfo.m; sourceTree = "<group>"; };
+		A6C7DB631C25534100246945 /* SSAccessoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccessoryInfo.h; sourceTree = "<group>"; };
+		A6C7DB641C25534100246945 /* SSAccessoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccessoryInfo.m; sourceTree = "<group>"; };
+		A6C7DB651C25534100246945 /* SSApplicationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSApplicationInfo.h; sourceTree = "<group>"; };
+		A6C7DB661C25534100246945 /* SSApplicationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSApplicationInfo.m; sourceTree = "<group>"; };
+		A6C7DB671C25534100246945 /* SSBatteryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBatteryInfo.h; sourceTree = "<group>"; };
+		A6C7DB681C25534100246945 /* SSBatteryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBatteryInfo.m; sourceTree = "<group>"; };
+		A6C7DB691C25534100246945 /* SSCarrierInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCarrierInfo.h; sourceTree = "<group>"; };
+		A6C7DB6A1C25534100246945 /* SSCarrierInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCarrierInfo.m; sourceTree = "<group>"; };
+		A6C7DB6B1C25534100246945 /* SSDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDiskInfo.h; sourceTree = "<group>"; };
+		A6C7DB6C1C25534100246945 /* SSDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDiskInfo.m; sourceTree = "<group>"; };
+		A6C7DB6D1C25534100246945 /* SSHardwareInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHardwareInfo.h; sourceTree = "<group>"; };
+		A6C7DB6E1C25534100246945 /* SSHardwareInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHardwareInfo.m; sourceTree = "<group>"; };
+		A6C7DB6F1C25534100246945 /* SSJailbreakCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJailbreakCheck.h; sourceTree = "<group>"; };
+		A6C7DB701C25534100246945 /* SSJailbreakCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJailbreakCheck.m; sourceTree = "<group>"; };
+		A6C7DB711C25534100246945 /* SSLocalizationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocalizationInfo.h; sourceTree = "<group>"; };
+		A6C7DB721C25534100246945 /* SSLocalizationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLocalizationInfo.m; sourceTree = "<group>"; };
+		A6C7DB731C25534100246945 /* SSMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMemoryInfo.h; sourceTree = "<group>"; };
+		A6C7DB741C25534100246945 /* SSMemoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMemoryInfo.m; sourceTree = "<group>"; };
+		A6C7DB751C25534100246945 /* SSNetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetworkInfo.h; sourceTree = "<group>"; };
+		A6C7DB761C25534100246945 /* SSNetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetworkInfo.m; sourceTree = "<group>"; };
+		A6C7DB771C25534100246945 /* SSProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessInfo.h; sourceTree = "<group>"; };
+		A6C7DB781C25534100246945 /* SSProcessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessInfo.m; sourceTree = "<group>"; };
+		A6C7DB791C25534100246945 /* SSProcessorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessorInfo.h; sourceTree = "<group>"; };
+		A6C7DB7A1C25534100246945 /* SSProcessorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessorInfo.m; sourceTree = "<group>"; };
+		A6C7DB7B1C25534100246945 /* SSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUUID.h; sourceTree = "<group>"; };
+		A6C7DB7C1C25534100246945 /* SSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUUID.m; sourceTree = "<group>"; };
+		A6C7DB8C1C25541200246945 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A6C7DB8D1C2554D000246945 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6C7DB401C25532800246945 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6C7DB3A1C25532800246945 = {
+			isa = PBXGroup;
+			children = (
+				A6C7DB451C25532800246945 /* 12-获取硬件信息 */,
+				A6C7DB441C25532800246945 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6C7DB441C25532800246945 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6C7DB431C25532800246945 /* 12-获取硬件信息.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6C7DB451C25532800246945 /* 12-获取硬件信息 */ = {
+			isa = PBXGroup;
+			children = (
+				A6C7DB8D1C2554D000246945 /* route.h */,
+				A6C7DB5D1C25534100246945 /* System Services */,
+				A6C7DB491C25532800246945 /* AppDelegate.h */,
+				A6C7DB4A1C25532800246945 /* AppDelegate.m */,
+				A6C7DB4C1C25532800246945 /* ViewController.h */,
+				A6C7DB4D1C25532800246945 /* ViewController.m */,
+				A6C7DB4F1C25532800246945 /* Main.storyboard */,
+				A6C7DB521C25532800246945 /* Assets.xcassets */,
+				A6C7DB541C25532800246945 /* LaunchScreen.storyboard */,
+				A6C7DB571C25532800246945 /* Info.plist */,
+				A6C7DB461C25532800246945 /* Supporting Files */,
+				A6C7DB8C1C25541200246945 /* PrefixHeader.pch */,
+			);
+			path = "12-获取硬件信息";
+			sourceTree = "<group>";
+		};
+		A6C7DB461C25532800246945 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6C7DB471C25532800246945 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6C7DB5D1C25534100246945 /* System Services */ = {
+			isa = PBXGroup;
+			children = (
+				A6C7DB5E1C25534100246945 /* SystemServices.h */,
+				A6C7DB5F1C25534100246945 /* SystemServices.m */,
+				A6C7DB601C25534100246945 /* Utilities */,
+			);
+			path = "System Services";
+			sourceTree = "<group>";
+		};
+		A6C7DB601C25534100246945 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A6C7DB611C25534100246945 /* SSAccelerometerInfo.h */,
+				A6C7DB621C25534100246945 /* SSAccelerometerInfo.m */,
+				A6C7DB631C25534100246945 /* SSAccessoryInfo.h */,
+				A6C7DB641C25534100246945 /* SSAccessoryInfo.m */,
+				A6C7DB651C25534100246945 /* SSApplicationInfo.h */,
+				A6C7DB661C25534100246945 /* SSApplicationInfo.m */,
+				A6C7DB671C25534100246945 /* SSBatteryInfo.h */,
+				A6C7DB681C25534100246945 /* SSBatteryInfo.m */,
+				A6C7DB691C25534100246945 /* SSCarrierInfo.h */,
+				A6C7DB6A1C25534100246945 /* SSCarrierInfo.m */,
+				A6C7DB6B1C25534100246945 /* SSDiskInfo.h */,
+				A6C7DB6C1C25534100246945 /* SSDiskInfo.m */,
+				A6C7DB6D1C25534100246945 /* SSHardwareInfo.h */,
+				A6C7DB6E1C25534100246945 /* SSHardwareInfo.m */,
+				A6C7DB6F1C25534100246945 /* SSJailbreakCheck.h */,
+				A6C7DB701C25534100246945 /* SSJailbreakCheck.m */,
+				A6C7DB711C25534100246945 /* SSLocalizationInfo.h */,
+				A6C7DB721C25534100246945 /* SSLocalizationInfo.m */,
+				A6C7DB731C25534100246945 /* SSMemoryInfo.h */,
+				A6C7DB741C25534100246945 /* SSMemoryInfo.m */,
+				A6C7DB751C25534100246945 /* SSNetworkInfo.h */,
+				A6C7DB761C25534100246945 /* SSNetworkInfo.m */,
+				A6C7DB771C25534100246945 /* SSProcessInfo.h */,
+				A6C7DB781C25534100246945 /* SSProcessInfo.m */,
+				A6C7DB791C25534100246945 /* SSProcessorInfo.h */,
+				A6C7DB7A1C25534100246945 /* SSProcessorInfo.m */,
+				A6C7DB7B1C25534100246945 /* SSUUID.h */,
+				A6C7DB7C1C25534100246945 /* SSUUID.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6C7DB421C25532800246945 /* 12-获取硬件信息 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C7DB5A1C25532800246945 /* Build configuration list for PBXNativeTarget "12-获取硬件信息" */;
+			buildPhases = (
+				A6C7DB3F1C25532800246945 /* Sources */,
+				A6C7DB401C25532800246945 /* Frameworks */,
+				A6C7DB411C25532800246945 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "12-获取硬件信息";
+			productName = "12-获取硬件信息";
+			productReference = A6C7DB431C25532800246945 /* 12-获取硬件信息.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6C7DB3B1C25532800246945 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = heima;
+				TargetAttributes = {
+					A6C7DB421C25532800246945 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = A6C7DB3E1C25532800246945 /* Build configuration list for PBXProject "12-获取硬件信息" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6C7DB3A1C25532800246945;
+			productRefGroup = A6C7DB441C25532800246945 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6C7DB421C25532800246945 /* 12-获取硬件信息 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6C7DB411C25532800246945 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C7DB561C25532800246945 /* LaunchScreen.storyboard in Resources */,
+				A6C7DB531C25532800246945 /* Assets.xcassets in Resources */,
+				A6C7DB511C25532800246945 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6C7DB3F1C25532800246945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C7DB7F1C25534100246945 /* SSAccessoryInfo.m in Sources */,
+				A6C7DB841C25534100246945 /* SSHardwareInfo.m in Sources */,
+				A6C7DB8A1C25534100246945 /* SSProcessorInfo.m in Sources */,
+				A6C7DB821C25534100246945 /* SSCarrierInfo.m in Sources */,
+				A6C7DB8B1C25534100246945 /* SSUUID.m in Sources */,
+				A6C7DB861C25534100246945 /* SSLocalizationInfo.m in Sources */,
+				A6C7DB831C25534100246945 /* SSDiskInfo.m in Sources */,
+				A6C7DB7E1C25534100246945 /* SSAccelerometerInfo.m in Sources */,
+				A6C7DB7D1C25534100246945 /* SystemServices.m in Sources */,
+				A6C7DB881C25534100246945 /* SSNetworkInfo.m in Sources */,
+				A6C7DB4E1C25532800246945 /* ViewController.m in Sources */,
+				A6C7DB4B1C25532800246945 /* AppDelegate.m in Sources */,
+				A6C7DB481C25532800246945 /* main.m in Sources */,
+				A6C7DB891C25534100246945 /* SSProcessInfo.m in Sources */,
+				A6C7DB801C25534100246945 /* SSApplicationInfo.m in Sources */,
+				A6C7DB851C25534100246945 /* SSJailbreakCheck.m in Sources */,
+				A6C7DB871C25534100246945 /* SSMemoryInfo.m in Sources */,
+				A6C7DB811C25534100246945 /* SSBatteryInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A6C7DB4F1C25532800246945 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C7DB501C25532800246945 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A6C7DB541C25532800246945 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C7DB551C25532800246945 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6C7DB581C25532800246945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A6C7DB591C25532800246945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6C7DB5B1C25532800246945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "12-获取硬件信息/PrefixHeader.pch";
+				INFOPLIST_FILE = "12-获取硬件信息/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itheima.-2-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A6C7DB5C1C25532800246945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "12-获取硬件信息/PrefixHeader.pch";
+				INFOPLIST_FILE = "12-获取硬件信息/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itheima.-2-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6C7DB3E1C25532800246945 /* Build configuration list for PBXProject "12-获取硬件信息" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C7DB581C25532800246945 /* Debug */,
+				A6C7DB591C25532800246945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C7DB5A1C25532800246945 /* Build configuration list for PBXNativeTarget "12-获取硬件信息" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C7DB5B1C25532800246945 /* Debug */,
+				A6C7DB5C1C25532800246945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6C7DB3B1C25532800246945 /* Project object */;
+}

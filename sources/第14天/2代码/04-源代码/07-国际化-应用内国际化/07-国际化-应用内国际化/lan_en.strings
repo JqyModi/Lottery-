@@ -1,0 +1,10 @@
+/* 
+  lan_en.strings
+  07-国际化-应用内国际化
+
+  Created by Romeo on 15/12/19.
+  Copyright © 2015年 heima. All rights reserved.
+*/
+"title" = "title1";
+"message" = "good good study day day up";
+"commit" = "commit1";

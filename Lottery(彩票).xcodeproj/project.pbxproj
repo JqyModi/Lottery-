@@ -54,6 +54,14 @@
 		040A7C4520590BB00037E17A /* Lottery(彩票) */ = {
 			isa = PBXGroup;
 			children = (
+				040A7C5820590D2E0037E17A /* Support Files */,
+			);
+			path = "Lottery(彩票)";
+			sourceTree = "<group>";
+		};
+		040A7C5820590D2E0037E17A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				040A7C4620590BB00037E17A /* AppDelegate.swift */,
 				040A7C4820590BB00037E17A /* ViewController.swift */,
 				040A7C4A20590BB00037E17A /* Main.storyboard */,
@@ -61,7 +69,7 @@
 				040A7C4F20590BB00037E17A /* LaunchScreen.storyboard */,
 				040A7C5220590BB00037E17A /* Info.plist */,
 			);
-			path = "Lottery(彩票)";
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Lottery(彩票)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Lottery(彩票)/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.modi.Lottery----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Lottery(彩票)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Lottery(彩票)/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.modi.Lottery----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
