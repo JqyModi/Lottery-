@@ -33,6 +33,8 @@ class LuckyView: UIView {
         return r
     }()
     
+    //计时器引用：方便暂停
+    var link: CADisplayLink!
     
     class func luckyView() -> LuckyView {
         let lucky = Bundle.main.loadNibNamed("LuckyView", owner: nil, options: nil)?.first
@@ -49,7 +51,7 @@ class LuckyView: UIView {
     private func createBtnAndAddView() {
         for i in (0..<12) {
             let btn = UIButton()
-//            btn.backgroundColor = UIColor.red
+            btn.tag = i
             //设置按钮图片
             let normal = clipImageWithBigImage(image: UIImage(named: "LuckyAstrology")!, index: i)
             btn.setImage(normal, for: .normal)
@@ -77,10 +79,53 @@ class LuckyView: UIView {
         
     }
     
-    //开始选号
+    //开始选号：
     @IBAction func startRotateLucky(_ sender: UIButton) {
-        //快速旋转转盘
-        let angle = 2 * Double.pi 
+        //暂停自旋转动画
+        self.link.isPaused = true
+        
+        //快速旋转转盘：让点击的按钮旋转完成后回到最上方: 当前点击按钮：selectedBtn
+        if self.selectedBtn == nil {
+            return
+        }
+        
+        //通过标记判断是否已经在执行动画：选号
+        if (self.rotateImageView.layer.animation(forKey: "mark") == nil) {
+            //计算旋转角度
+            let angle = (2 * Double.pi / 12) * Double((selectedBtn?.tag)!)
+            let r = CABasicAnimation()
+            r.keyPath = "transform.rotation"
+            //        r.byValue = -angle + 5 * (2 * Double.pi)
+            r.duration = 3
+            r.toValue = 5 * (2 * Double.pi) - angle
+            //不回到原来位置
+            r.fillMode = kCAFillModeForwards
+            r.isRemovedOnCompletion = false
+            
+            //将动画添加到旋转View上
+            self.rotateImageView.layer.add(r, forKey: "mark")
+            
+            //手动旋转View解决layer 与 View 错位问题：
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + r.duration) {
+                //方式1
+                //            self.rotateImageView.layer.setAffineTransform(self.rotateImageView.transform.rotated(by: CGFloat(-angle)))
+                //在最新的基础上改变-angle
+                //方式2
+                //            self.rotateImageView.layer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(-angle)))
+                //在原来基础上改变-angle
+                //方式3
+                self.rotateImageView.transform = self.rotateImageView.transform.rotated(by: CGFloat(-angle))
+                debugPrint("延时执行完成")
+                
+                // 弹出窗口
+                let alertView = UIAlertView(title: "温馨提示", message: "您的幸运号码是：红色：02,08,11,23,24,30 蓝色：07", delegate: self, cancelButtonTitle: "确定")
+                alertView.show()
+                
+            }
+        }else {
+            debugPrint("正在选号 ~")
+        }
+        
     }
     
     override func layoutSubviews() {
@@ -107,6 +152,7 @@ class LuckyView: UIView {
         let link = CADisplayLink(target: self, selector: #selector(LuckyView.rotate))
         //添加到运行循环
         link.add(to: RunLoop.main, forMode: .defaultRunLoopMode)
+        self.link = link
     }
     
     @objc private func rotate() {
@@ -114,8 +160,8 @@ class LuckyView: UIView {
         let angle = 2 * Double.pi / 60 / 10
         //添加2D(平面)动画: ***
 //        self.rotateImageView.transform.rotated(by: CGFloat(angle * s * 10)) //这样只是改变了原来的没有设置到layer上
-        self.rotateImageView.layer.setAffineTransform(self.rotateImageView.transform.rotated(by: CGFloat(angle)))
-        
+//        self.rotateImageView.layer.setAffineTransform(self.rotateImageView.transform.rotated(by: CGFloat(angle)))
+        self.rotateImageView.transform = self.rotateImageView.transform.rotated(by: CGFloat(angle))
         //添加3D属性动画旋转：按钮点击位置错误BUG:核心动画作用在layer上UIView实际frame没有跟随CALayer去改变
 //        self.rotateImageView.layer.add(self.rotateAnim, forKey: nil)
         
@@ -139,4 +185,16 @@ class LuckyView: UIView {
         return targetImage
     }
     
+}
+
+extension LuckyView: UIAlertViewDelegate {
+    
+    func alertView(_ alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+        debugPrint("确定")
+        //恢复自转
+        self.link.isPaused = false
+        //移除掉核心动画:根据标记的Key移除对应的动画
+//        let anim = self.rotateImageView.layer.animation(forKey: "mark")
+        self.rotateImageView.layer.removeAnimation(forKey: "mark")
+    }
 }
