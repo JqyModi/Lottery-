@@ -22,20 +22,32 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="LuckyRotateWheel" translatesAutoresizingMaskIntoConstraints="NO" id="rWt-EJ-0fd">
                     <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQh-lW-FkR">
+                    <rect key="frame" x="103" y="103" width="81" height="81"/>
+                    <state key="normal" image="LuckyCenterButton"/>
+                    <state key="selected" image="LuckyCenterButtonPressed"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="rWt-EJ-0fd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5Vh-pP-P9z"/>
                 <constraint firstItem="rWt-EJ-0fd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MNF-sd-w29"/>
+                <constraint firstItem="FQh-lW-FkR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VwJ-lv-039"/>
+                <constraint firstItem="FQh-lW-FkR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="awg-o9-n6j"/>
                 <constraint firstItem="lPN-4U-0qD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oGE-83-mAs"/>
                 <constraint firstItem="lPN-4U-0qD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xmH-nE-OYb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="rotateImageView" destination="rWt-EJ-0fd" id="DTR-Dq-fdA"/>
+            </connections>
         </view>
     </objects>
     <resources>
         <image name="LuckyBaseBackground" width="286" height="286"/>
+        <image name="LuckyCenterButton" width="81" height="81"/>
+        <image name="LuckyCenterButtonPressed" width="81" height="81"/>
         <image name="LuckyRotateWheel" width="286" height="286"/>
     </resources>
 </document>
