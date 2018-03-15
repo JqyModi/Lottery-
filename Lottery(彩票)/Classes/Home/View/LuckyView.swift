@@ -13,8 +13,26 @@ class LuckyView: UIView {
     //旋转的锯齿ImageView
     @IBOutlet weak var rotateImageView: UIImageView!
     
+    @IBOutlet weak var startLucky: UIButton!
     //记录当前选中的按钮
     var selectedBtn: UIButton?
+    
+    lazy var rotateAnim: CABasicAnimation = {
+        let r = CABasicAnimation()
+        r.keyPath = "transform.rotation"
+        let angle = 2 * Double.pi / 60 / 10
+        r.byValue = angle
+        //不回到原来位置
+        r.fillMode = kCAFillModeForwards
+        r.isRemovedOnCompletion = false
+        return r
+    }()
+    
+    lazy var ratoteTransform: CGAffineTransform = {
+        let r = CGAffineTransform()
+        return r
+    }()
+    
     
     class func luckyView() -> LuckyView {
         let lucky = Bundle.main.loadNibNamed("LuckyView", owner: nil, options: nil)?.first
@@ -56,6 +74,13 @@ class LuckyView: UIView {
         self.selectedBtn?.isSelected = false
         sender.isSelected = true
         self.selectedBtn = sender
+        
+    }
+    
+    //开始选号
+    @IBAction func startRotateLucky(_ sender: UIButton) {
+        //快速旋转转盘
+        let angle = 2 * Double.pi 
     }
     
     override func layoutSubviews() {
@@ -73,8 +98,27 @@ class LuckyView: UIView {
             let angle = 2 * Double.pi / 12
             //设置btn旋转
             view.transform = CGAffineTransform(rotationAngle: CGFloat(angle * Double(i)))
-            
         }
+    }
+    
+    //定时器自动旋转：CADisplayLink
+    func startRotate() {
+        //创建毫秒级定时器：1s刷新60次：与屏幕同步
+        let link = CADisplayLink(target: self, selector: #selector(LuckyView.rotate))
+        //添加到运行循环
+        link.add(to: RunLoop.main, forMode: .defaultRunLoopMode)
+    }
+    
+    @objc private func rotate() {
+        //计算1次转动角度：一秒转60圈 -> 一秒一圈 -> 十秒一圈
+        let angle = 2 * Double.pi / 60 / 10
+        //添加2D(平面)动画: ***
+//        self.rotateImageView.transform.rotated(by: CGFloat(angle * s * 10)) //这样只是改变了原来的没有设置到layer上
+        self.rotateImageView.layer.setAffineTransform(self.rotateImageView.transform.rotated(by: CGFloat(angle)))
+        
+        //添加3D属性动画旋转：按钮点击位置错误BUG:核心动画作用在layer上UIView实际frame没有跟随CALayer去改变
+//        self.rotateImageView.layer.add(self.rotateAnim, forKey: nil)
+        
     }
     
     //切图：将大图切割成可用的小图:index是需要的图片下标

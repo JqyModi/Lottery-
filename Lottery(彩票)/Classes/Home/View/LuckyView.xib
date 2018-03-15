@@ -26,6 +26,9 @@
                     <rect key="frame" x="103" y="103" width="81" height="81"/>
                     <state key="normal" image="LuckyCenterButton"/>
                     <state key="selected" image="LuckyCenterButtonPressed"/>
+                    <connections>
+                        <action selector="startRotateLucky:" destination="iN0-l3-epB" eventType="touchUpInside" id="qEW-IA-i85"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -41,6 +44,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="rotateImageView" destination="rWt-EJ-0fd" id="DTR-Dq-fdA"/>
+                <outlet property="startLucky" destination="FQh-lW-FkR" id="oc2-AX-GPV"/>
             </connections>
         </view>
     </objects>

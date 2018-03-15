@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         //代码添加幸运转盘View
         setupView()
+        
     }
     
     private func setupView() {
@@ -26,6 +27,9 @@ class ViewController: UIViewController {
         self.view.addSubview(lucky)
         //设置居中显示
         lucky.center = self.view.center
+        
+        //设置转盘旋转
+        lucky.startRotate()
     }
 
     /**
