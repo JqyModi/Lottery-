@@ -10,8 +10,11 @@ import UIKit
 
 class LuckyView: UIView {
     
-    //
+    //旋转的锯齿ImageView
     @IBOutlet weak var rotateImageView: UIImageView!
+    
+    //记录当前选中的按钮
+    var selectedBtn: UIButton?
     
     class func luckyView() -> LuckyView {
         let lucky = Bundle.main.loadNibNamed("LuckyView", owner: nil, options: nil)?.first
@@ -34,9 +37,25 @@ class LuckyView: UIView {
             btn.setImage(normal, for: .normal)
             //设置btn内边距上移图片内容
             btn.imageEdgeInsets = UIEdgeInsets(top: -50, left: 0, bottom: 0, right: 0)
+            //设置选中图片
+            let selected = clipImageWithBigImage(image: UIImage(named: "LuckyAstrologyPressed")!, index: i)
+            btn.setImage(selected, for: .selected)
+            //设置btn内边距上移图片内容
+            btn.imageEdgeInsets = UIEdgeInsets(top: -50, left: 0, bottom: 0, right: 0)
+            //设置背景图片
+            btn.setBackgroundImage(UIImage(named: "LuckyRototeSelected"), for: .selected)
             //添加到View
             self.rotateImageView.addSubview(btn)
+            
+            //给按钮添加点击事件
+            btn.addTarget(self, action: #selector(self.btnDidClicked), for: .touchUpInside)
         }
+    }
+    
+    @objc private func btnDidClicked(sender: UIButton) {
+        self.selectedBtn?.isSelected = false
+        sender.isSelected = true
+        self.selectedBtn = sender
     }
     
     override func layoutSubviews() {
