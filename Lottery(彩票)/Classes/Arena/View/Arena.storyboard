@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6XW-Yj-tvo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0I5-0H-PNp">
+            <objects>
+                <navigationController id="6XW-Yj-tvo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NRI-as-NFt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="36x-hF-q6v" kind="relationship" relationship="rootViewController" id="NoV-oi-1on"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gic-Xz-YNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-876" y="141"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l8v-1t-WZD">
+            <objects>
+                <viewController id="36x-hF-q6v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nig-io-iK1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="7tJ-c6-t93"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VL8-Kq-p6W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fgt-Gf-P2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="141"/>
+        </scene>
+    </scenes>
+</document>
