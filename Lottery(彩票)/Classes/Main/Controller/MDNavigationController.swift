@@ -18,6 +18,9 @@ class MDNavigationController: UINavigationController {
         //UIBarMetrics default表示横竖屏都显示
         self.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
         
+        //通过属性设置字体样式
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        
     }
 
 }

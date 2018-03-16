@@ -26,6 +26,7 @@
 		04860C6C205B6C8B007F8B96 /* MDTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04860C6B205B6C8B007F8B96 /* MDTabBar.swift */; };
 		04860C6E205B7162007F8B96 /* MDTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04860C6D205B7162007F8B96 /* MDTabBarButton.swift */; };
 		04860C70205B9383007F8B96 /* MDNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04860C6F205B9383007F8B96 /* MDNavigationController.swift */; };
+		04860C72205B9AA5007F8B96 /* MDArenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04860C71205B9AA5007F8B96 /* MDArenaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		04860C6B205B6C8B007F8B96 /* MDTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTabBar.swift; sourceTree = "<group>"; };
 		04860C6D205B7162007F8B96 /* MDTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTabBarButton.swift; sourceTree = "<group>"; };
 		04860C6F205B9383007F8B96 /* MDNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDNavigationController.swift; sourceTree = "<group>"; };
+		04860C71205B9AA5007F8B96 /* MDArenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDArenaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		04860C31205B67F7007F8B96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04860C71205B9AA5007F8B96 /* MDArenaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04860C6E205B7162007F8B96 /* MDTabBarButton.swift in Sources */,
+				04860C72205B9AA5007F8B96 /* MDArenaViewController.swift in Sources */,
 				040A7C4720590BB00037E17A /* AppDelegate.swift in Sources */,
 				04860C6A205B6842007F8B96 /* MDTabBarViewController.swift in Sources */,
 				04860C6C205B6C8B007F8B96 /* MDTabBar.swift in Sources */,

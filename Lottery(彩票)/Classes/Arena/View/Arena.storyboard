@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-876" y="141"/>
         </scene>
-        <!--View Controller-->
+        <!--Arena View Controller-->
         <scene sceneID="l8v-1t-WZD">
             <objects>
-                <viewController id="36x-hF-q6v" sceneMemberID="viewController">
+                <viewController id="36x-hF-q6v" customClass="MDArenaViewController" customModule="Lottery_彩票_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nig-io-iK1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
