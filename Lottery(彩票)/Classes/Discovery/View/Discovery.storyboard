@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +11,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bQr-fk-5y2">
             <objects>
-                <navigationController id="GJ6-k5-MuR" sceneMemberID="viewController">
+                <navigationController id="GJ6-k5-MuR" customClass="MDNavigationController" customModule="Lottery_彩票_" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g34-wI-850">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -25,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-929" y="-84"/>
         </scene>
-        <!--Table View Controller-->
+        <!--发现-->
         <scene sceneID="J5g-8g-YMu">
             <objects>
                 <tableViewController id="Ip1-Qe-kDb" sceneMemberID="viewController">
@@ -48,7 +47,7 @@
                             <outlet property="delegate" destination="Ip1-Qe-kDb" id="KeA-We-DMX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="F8o-uo-XvS"/>
+                    <navigationItem key="navigationItem" title="发现" id="F8o-uo-XvS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L85-xV-USv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
