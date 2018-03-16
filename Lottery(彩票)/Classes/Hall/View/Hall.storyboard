@@ -27,7 +27,7 @@
         <!--购彩大厅-->
         <scene sceneID="J5g-8g-YMu">
             <objects>
-                <tableViewController id="Ip1-Qe-kDb" sceneMemberID="viewController">
+                <tableViewController id="Ip1-Qe-kDb" customClass="MDHallViewController" customModule="Lottery_彩票_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K3K-jn-3h7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

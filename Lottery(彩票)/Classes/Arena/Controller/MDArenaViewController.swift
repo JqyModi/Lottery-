@@ -13,6 +13,10 @@ class MDArenaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupNavStyle()
+    }
+    
+    private func setupNavStyle() {
         //设置当前导航控制器的样式
         let image = UIImage(named: "NLArenaNavBar64")
         self.navigationController?.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
