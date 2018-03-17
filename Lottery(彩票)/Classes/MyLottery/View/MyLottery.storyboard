@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6XW-Yj-tvo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6XW-Yj-tvo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,10 +42,10 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdm-Kc-iKU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwv-j6-Orm">
                                 <rect key="frame" x="16" y="250" width="343" height="34"/>
                                 <state key="normal" title="登录" backgroundImage="RedButton"/>
-                                <state key="selected" backgroundImage="RedButtonPressed"/>
+                                <state key="selected" title="登录" backgroundImage="RedButtonPressed"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedButton" highlightedImage="RedButtonPressed" translatesAutoresizingMaskIntoConstraints="NO" id="A3o-cx-C1m">
                                 <rect key="frame" x="16" y="292" width="343" height="34"/>
@@ -54,19 +54,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="A3o-cx-C1m" firstAttribute="trailing" secondItem="bdm-Kc-iKU" secondAttribute="trailing" id="34H-LG-fJI"/>
-                            <constraint firstItem="A3o-cx-C1m" firstAttribute="top" secondItem="bdm-Kc-iKU" secondAttribute="bottom" constant="8" id="899-Lf-bck"/>
-                            <constraint firstItem="A3o-cx-C1m" firstAttribute="centerX" secondItem="bdm-Kc-iKU" secondAttribute="centerX" id="DOb-Rf-HUA"/>
-                            <constraint firstItem="A3o-cx-C1m" firstAttribute="width" secondItem="bdm-Kc-iKU" secondAttribute="width" id="G3P-gO-0sQ"/>
+                            <constraint firstItem="nwv-j6-Orm" firstAttribute="leading" secondItem="7tJ-c6-t93" secondAttribute="leading" constant="16" id="Dsg-l3-eVW"/>
                             <constraint firstItem="dCi-o1-s8A" firstAttribute="centerX" secondItem="nig-io-iK1" secondAttribute="centerX" id="QKc-23-8Y0"/>
                             <constraint firstItem="o8e-Ep-be7" firstAttribute="top" secondItem="7tJ-c6-t93" secondAttribute="top" constant="11" id="Qel-wy-OgL"/>
-                            <constraint firstItem="A3o-cx-C1m" firstAttribute="leading" secondItem="bdm-Kc-iKU" secondAttribute="leading" id="Wyb-vt-JSm"/>
-                            <constraint firstItem="A3o-cx-C1m" firstAttribute="height" secondItem="bdm-Kc-iKU" secondAttribute="height" id="X0i-gH-uj8"/>
+                            <constraint firstItem="A3o-cx-C1m" firstAttribute="top" secondItem="nwv-j6-Orm" secondAttribute="bottom" constant="8" id="Uet-I8-GYp"/>
+                            <constraint firstItem="7tJ-c6-t93" firstAttribute="trailing" secondItem="A3o-cx-C1m" secondAttribute="trailing" constant="16" id="WhE-3X-KjT"/>
                             <constraint firstItem="dCi-o1-s8A" firstAttribute="top" secondItem="o8e-Ep-be7" secondAttribute="bottom" constant="8" id="bNL-Us-iFP"/>
-                            <constraint firstItem="7tJ-c6-t93" firstAttribute="trailing" secondItem="bdm-Kc-iKU" secondAttribute="trailing" constant="16" id="dju-3S-Zqx"/>
-                            <constraint firstItem="bdm-Kc-iKU" firstAttribute="top" secondItem="dCi-o1-s8A" secondAttribute="bottom" constant="8" id="mfF-jq-2AZ"/>
-                            <constraint firstItem="bdm-Kc-iKU" firstAttribute="leading" secondItem="7tJ-c6-t93" secondAttribute="leading" constant="16" id="o15-kE-gaL"/>
+                            <constraint firstItem="A3o-cx-C1m" firstAttribute="leading" secondItem="7tJ-c6-t93" secondAttribute="leading" constant="16" id="eFY-af-b2R"/>
+                            <constraint firstItem="7tJ-c6-t93" firstAttribute="trailing" secondItem="nwv-j6-Orm" secondAttribute="trailing" constant="16" id="km4-8F-pPz"/>
                             <constraint firstItem="o8e-Ep-be7" firstAttribute="centerX" secondItem="nig-io-iK1" secondAttribute="centerX" id="y5T-rB-Kr4"/>
+                            <constraint firstItem="nwv-j6-Orm" firstAttribute="top" secondItem="dCi-o1-s8A" secondAttribute="bottom" constant="8" id="yIX-Rt-Qdm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7tJ-c6-t93"/>
                     </view>
@@ -82,7 +79,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="Mylottery_config" id="gh7-hC-oAX"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="loginBtn" destination="bdm-Kc-iKU" id="9Sq-bQ-TEV"/>
+                        <outlet property="loginBtn" destination="nwv-j6-Orm" id="Fz9-vw-N1W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgt-Gf-P2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
