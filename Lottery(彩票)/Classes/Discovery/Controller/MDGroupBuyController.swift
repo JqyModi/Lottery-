@@ -26,6 +26,10 @@ class MDGroupBuyController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true  //default
         UIView.animate(withDuration: 0.25) {
             self.blueView.h = (self.blueView.h != 0) ? 0 : 150
+            
+            //设置图标旋转：每次在自身基础上转180度
+            sender.imageView?.transform =  (sender.imageView?.transform.rotated(by: CGFloat(Double.pi)))!
+            
         }
         
     }
