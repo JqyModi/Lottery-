@@ -34,6 +34,7 @@
 		04860C78205BAF6A007F8B96 /* MDActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04860C77205BAF6A007F8B96 /* MDActivityView.swift */; };
 		04EEA679205CA10E00E0DB0A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEA678205CA10E00E0DB0A /* UIView+Extension.swift */; };
 		04EEA67B205CAB9400E0DB0A /* MDGroupBuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEA67A205CAB9400E0DB0A /* MDGroupBuyButton.swift */; };
+		04EEA67D205CBE6700E0DB0A /* MDLuckyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEA67C205CBE6700E0DB0A /* MDLuckyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		04860C77205BAF6A007F8B96 /* MDActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDActivityView.swift; sourceTree = "<group>"; };
 		04EEA678205CA10E00E0DB0A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		04EEA67A205CAB9400E0DB0A /* MDGroupBuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDGroupBuyButton.swift; sourceTree = "<group>"; };
+		04EEA67C205CBE6700E0DB0A /* MDLuckyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDLuckyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			children = (
 				04523261205C974F007E5989 /* MDDiscoveryController.swift */,
 				04167985205C9ACA008C5BCD /* MDGroupBuyController.swift */,
+				04EEA67C205CBE6700E0DB0A /* MDLuckyController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04860C6E205B7162007F8B96 /* MDTabBarButton.swift in Sources */,
+				04EEA67D205CBE6700E0DB0A /* MDLuckyController.swift in Sources */,
 				04860C72205B9AA5007F8B96 /* MDArenaViewController.swift in Sources */,
 				04167986205C9ACA008C5BCD /* MDGroupBuyController.swift in Sources */,
 				04860C74205BA089007F8B96 /* MDHallViewController.swift in Sources */,

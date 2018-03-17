@@ -218,7 +218,7 @@
         <!--幸运选号-->
         <scene sceneID="QTp-C9-KBC">
             <objects>
-                <viewController id="STa-ul-c4A" sceneMemberID="viewController">
+                <viewController id="STa-ul-c4A" customClass="MDLuckyController" customModule="Lottery_彩票_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DOO-2E-XAi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,17 +226,63 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luck_entry_background" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-a1-Plx">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="lucky_entry_light0" translatesAutoresizingMaskIntoConstraints="NO" id="a8d-oO-Dlq">
+                                <rect key="frame" x="0.0" y="106" width="375" height="29"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThU-oe-vdc">
+                                <rect key="frame" x="39" y="181" width="137" height="140"/>
+                                <state key="normal" backgroundImage="luck_entry_birthday_button_normal"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yem-gy-NOO">
+                                <rect key="frame" x="199" y="181" width="137" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="bmq-Sn-eSq"/>
+                                    <constraint firstAttribute="width" constant="137" id="lsc-OO-fVq"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="luck_entry_lots_button_normal"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eI-M9-Qoq">
+                                <rect key="frame" x="39" y="341" width="137" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="CgH-ml-Hck"/>
+                                    <constraint firstAttribute="height" constant="140" id="KtQ-mg-kPA"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="luck_entry_number_button_normal"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBq-Ld-XHO">
+                                <rect key="frame" x="199" y="341" width="137" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="VqF-Xm-fsw"/>
+                                    <constraint firstAttribute="height" constant="140" id="jLP-lZ-eKB"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="luck_entry_roulette_button_normal"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Yem-gy-NOO" firstAttribute="top" secondItem="a8d-oO-Dlq" secondAttribute="bottom" constant="46" id="0cC-ZT-P3Z"/>
+                            <constraint firstItem="ThU-oe-vdc" firstAttribute="centerX" secondItem="DOO-2E-XAi" secondAttribute="centerX" constant="-80" id="35B-ep-1Rd"/>
                             <constraint firstItem="LdS-a1-Plx" firstAttribute="leading" secondItem="x9z-aw-HGJ" secondAttribute="leading" id="8Wc-AJ-rqw"/>
+                            <constraint firstItem="9eI-M9-Qoq" firstAttribute="centerX" secondItem="ThU-oe-vdc" secondAttribute="centerX" id="CoT-d9-3nS"/>
                             <constraint firstItem="x9z-aw-HGJ" firstAttribute="bottom" secondItem="LdS-a1-Plx" secondAttribute="bottom" id="EjJ-ap-Qqx"/>
+                            <constraint firstItem="9eI-M9-Qoq" firstAttribute="top" secondItem="ThU-oe-vdc" secondAttribute="bottom" constant="20" id="Fci-Jh-Sin"/>
+                            <constraint firstItem="ThU-oe-vdc" firstAttribute="top" secondItem="a8d-oO-Dlq" secondAttribute="bottom" constant="46" id="H1g-87-Ijc"/>
+                            <constraint firstItem="RBq-Ld-XHO" firstAttribute="leading" secondItem="Yem-gy-NOO" secondAttribute="trailing" constant="-137" id="MMu-rC-W1s"/>
                             <constraint firstItem="LdS-a1-Plx" firstAttribute="top" secondItem="x9z-aw-HGJ" secondAttribute="top" id="Y1c-M0-8aY"/>
+                            <constraint firstItem="a8d-oO-Dlq" firstAttribute="top" secondItem="x9z-aw-HGJ" secondAttribute="top" constant="42" id="fmZ-QK-7za"/>
+                            <constraint firstItem="x9z-aw-HGJ" firstAttribute="trailing" secondItem="a8d-oO-Dlq" secondAttribute="trailing" id="jNP-5m-vLb"/>
+                            <constraint firstItem="RBq-Ld-XHO" firstAttribute="top" secondItem="Yem-gy-NOO" secondAttribute="bottom" constant="20" id="oJE-6K-O2h"/>
+                            <constraint firstItem="a8d-oO-Dlq" firstAttribute="leading" secondItem="x9z-aw-HGJ" secondAttribute="leading" id="olM-RA-w0d"/>
                             <constraint firstItem="x9z-aw-HGJ" firstAttribute="trailing" secondItem="LdS-a1-Plx" secondAttribute="trailing" id="sZ3-Ut-pja"/>
+                            <constraint firstItem="RBq-Ld-XHO" firstAttribute="centerX" secondItem="Yem-gy-NOO" secondAttribute="centerX" id="wV2-z7-Fji"/>
+                            <constraint firstItem="Yem-gy-NOO" firstAttribute="centerX" secondItem="DOO-2E-XAi" secondAttribute="centerX" constant="80" id="wej-PS-GfP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x9z-aw-HGJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="幸运选号" id="Ipj-k4-OVj"/>
+                    <connections>
+                        <outlet property="lightImageView" destination="a8d-oO-Dlq" id="0po-29-8Zb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbs-tL-RqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,6 +300,11 @@
         <image name="discovery_news_icon" width="115" height="79"/>
         <image name="discovery_news_title" width="55" height="23"/>
         <image name="luck_entry_background" width="320" height="368"/>
+        <image name="luck_entry_birthday_button_normal" width="137" height="140"/>
+        <image name="luck_entry_lots_button_normal" width="153" height="152"/>
+        <image name="luck_entry_number_button_normal" width="130" height="139"/>
+        <image name="luck_entry_roulette_button_normal" width="140" height="144"/>
+        <image name="lucky_entry_light0" width="231" height="29"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

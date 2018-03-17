@@ -17,4 +17,5 @@ class MDGroupBuyButton: UIButton {
         self.imageView?.x = (self.titleLabel?.w)!
     }
     
+    
 }
