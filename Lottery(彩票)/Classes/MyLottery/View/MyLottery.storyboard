@@ -28,18 +28,74 @@
         <!--我的彩票-->
         <scene sceneID="l8v-1t-WZD">
             <objects>
-                <viewController id="36x-hF-q6v" sceneMemberID="viewController">
+                <viewController id="36x-hF-q6v" customClass="MDMyLotteryController" customModule="Lottery_彩票_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nig-io-iK1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="LoginScreen" translatesAutoresizingMaskIntoConstraints="NO" id="o8e-Ep-be7">
+                                <rect key="frame" x="39" y="75" width="296" height="138"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网易邮箱可以直接登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCi-o1-s8A">
+                                <rect key="frame" x="100" y="221" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdm-Kc-iKU">
+                                <rect key="frame" x="16" y="250" width="343" height="34"/>
+                                <state key="normal" title="登录" backgroundImage="RedButton"/>
+                                <state key="selected" backgroundImage="RedButtonPressed"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedButton" highlightedImage="RedButtonPressed" translatesAutoresizingMaskIntoConstraints="NO" id="A3o-cx-C1m">
+                                <rect key="frame" x="16" y="292" width="343" height="34"/>
+                                <rect key="contentStretch" x="0.25" y="0.25" width="0.5" height="0.5"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A3o-cx-C1m" firstAttribute="trailing" secondItem="bdm-Kc-iKU" secondAttribute="trailing" id="34H-LG-fJI"/>
+                            <constraint firstItem="A3o-cx-C1m" firstAttribute="top" secondItem="bdm-Kc-iKU" secondAttribute="bottom" constant="8" id="899-Lf-bck"/>
+                            <constraint firstItem="A3o-cx-C1m" firstAttribute="centerX" secondItem="bdm-Kc-iKU" secondAttribute="centerX" id="DOb-Rf-HUA"/>
+                            <constraint firstItem="A3o-cx-C1m" firstAttribute="width" secondItem="bdm-Kc-iKU" secondAttribute="width" id="G3P-gO-0sQ"/>
+                            <constraint firstItem="dCi-o1-s8A" firstAttribute="centerX" secondItem="nig-io-iK1" secondAttribute="centerX" id="QKc-23-8Y0"/>
+                            <constraint firstItem="o8e-Ep-be7" firstAttribute="top" secondItem="7tJ-c6-t93" secondAttribute="top" constant="11" id="Qel-wy-OgL"/>
+                            <constraint firstItem="A3o-cx-C1m" firstAttribute="leading" secondItem="bdm-Kc-iKU" secondAttribute="leading" id="Wyb-vt-JSm"/>
+                            <constraint firstItem="A3o-cx-C1m" firstAttribute="height" secondItem="bdm-Kc-iKU" secondAttribute="height" id="X0i-gH-uj8"/>
+                            <constraint firstItem="dCi-o1-s8A" firstAttribute="top" secondItem="o8e-Ep-be7" secondAttribute="bottom" constant="8" id="bNL-Us-iFP"/>
+                            <constraint firstItem="7tJ-c6-t93" firstAttribute="trailing" secondItem="bdm-Kc-iKU" secondAttribute="trailing" constant="16" id="dju-3S-Zqx"/>
+                            <constraint firstItem="bdm-Kc-iKU" firstAttribute="top" secondItem="dCi-o1-s8A" secondAttribute="bottom" constant="8" id="mfF-jq-2AZ"/>
+                            <constraint firstItem="bdm-Kc-iKU" firstAttribute="leading" secondItem="7tJ-c6-t93" secondAttribute="leading" constant="16" id="o15-kE-gaL"/>
+                            <constraint firstItem="o8e-Ep-be7" firstAttribute="centerX" secondItem="nig-io-iK1" secondAttribute="centerX" id="y5T-rB-Kr4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7tJ-c6-t93"/>
                     </view>
-                    <navigationItem key="navigationItem" title="我的彩票" id="VL8-Kq-p6W"/>
+                    <navigationItem key="navigationItem" title="我的彩票" id="VL8-Kq-p6W">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="9Pv-QE-2aP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yl6-Rh-v5R">
+                                <rect key="frame" x="16" y="11" width="50" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="客服" image="FBMM_Barbutton"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Mylottery_config" id="gh7-hC-oAX"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loginBtn" destination="bdm-Kc-iKU" id="9Sq-bQ-TEV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgt-Gf-P2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="141"/>
+            <point key="canvasLocation" x="-135.19999999999999" y="139.880059970015"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FBMM_Barbutton" width="13" height="13"/>
+        <image name="LoginScreen" width="296" height="138"/>
+        <image name="Mylottery_config" width="22" height="22"/>
+        <image name="RedButton" width="61" height="34"/>
+        <image name="RedButtonPressed" width="61" height="34"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

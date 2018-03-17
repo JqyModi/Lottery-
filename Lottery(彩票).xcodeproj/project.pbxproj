@@ -35,6 +35,7 @@
 		04EEA679205CA10E00E0DB0A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEA678205CA10E00E0DB0A /* UIView+Extension.swift */; };
 		04EEA67B205CAB9400E0DB0A /* MDGroupBuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEA67A205CAB9400E0DB0A /* MDGroupBuyButton.swift */; };
 		04EEA67D205CBE6700E0DB0A /* MDLuckyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEA67C205CBE6700E0DB0A /* MDLuckyController.swift */; };
+		04EEA67F205CC97300E0DB0A /* MDMyLotteryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEA67E205CC97300E0DB0A /* MDMyLotteryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		04EEA678205CA10E00E0DB0A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		04EEA67A205CAB9400E0DB0A /* MDGroupBuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDGroupBuyButton.swift; sourceTree = "<group>"; };
 		04EEA67C205CBE6700E0DB0A /* MDLuckyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDLuckyController.swift; sourceTree = "<group>"; };
+		04EEA67E205CC97300E0DB0A /* MDMyLotteryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMyLotteryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +389,7 @@
 		04860C58205B67F7007F8B96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04EEA67E205CC97300E0DB0A /* MDMyLotteryController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				04860C74205BA089007F8B96 /* MDHallViewController.swift in Sources */,
 				040A7C4720590BB00037E17A /* AppDelegate.swift in Sources */,
 				04860C6A205B6842007F8B96 /* MDTabBarViewController.swift in Sources */,
+				04EEA67F205CC97300E0DB0A /* MDMyLotteryController.swift in Sources */,
 				04EEA679205CA10E00E0DB0A /* UIView+Extension.swift in Sources */,
 				04523262205C974F007E5989 /* MDDiscoveryController.swift in Sources */,
 				04EEA67B205CAB9400E0DB0A /* MDGroupBuyButton.swift in Sources */,
