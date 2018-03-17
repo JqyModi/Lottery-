@@ -22,5 +22,12 @@ class MDNavigationController: UINavigationController {
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
     }
+    
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        //push操作之前先隐藏掉系统TabBar：也可以在storyboard中勾选：效率不高
+        viewController.hidesBottomBarWhenPushed = true
+        //再调用系统push操作
+        super.pushViewController(viewController, animated: animated)
+    }
 
 }

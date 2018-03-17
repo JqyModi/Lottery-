@@ -74,11 +74,11 @@
                             </tableViewSection>
                             <tableViewSection id="JRc-ao-5Z0">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="nda-oL-pqZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="nda-oL-pqZ">
                                         <rect key="frame" x="0.0" y="171" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nda-oL-pqZ" id="RsM-cm-Bcv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discovery_luckyBet_title" translatesAutoresizingMaskIntoConstraints="NO" id="112-0X-ilr">
@@ -91,7 +91,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discovery_luckyBet_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5Mq-hu-iHK">
-                                                    <rect key="frame" x="258" y="11" width="101" height="79"/>
+                                                    <rect key="frame" x="224" y="11" width="101" height="79"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -103,6 +103,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="5Mq-hu-iHK" secondAttribute="bottom" constant="9.5" id="Zhw-AQ-LgF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="STa-ul-c4A" kind="push" id="xAJ-uQ-5F2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -210,7 +213,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJF-K3-pvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="-84"/>
+            <point key="canvasLocation" x="716" y="-355"/>
+        </scene>
+        <!--幸运选号-->
+        <scene sceneID="QTp-C9-KBC">
+            <objects>
+                <viewController id="STa-ul-c4A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DOO-2E-XAi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luck_entry_background" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-a1-Plx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LdS-a1-Plx" firstAttribute="leading" secondItem="x9z-aw-HGJ" secondAttribute="leading" id="8Wc-AJ-rqw"/>
+                            <constraint firstItem="x9z-aw-HGJ" firstAttribute="bottom" secondItem="LdS-a1-Plx" secondAttribute="bottom" id="EjJ-ap-Qqx"/>
+                            <constraint firstItem="LdS-a1-Plx" firstAttribute="top" secondItem="x9z-aw-HGJ" secondAttribute="top" id="Y1c-M0-8aY"/>
+                            <constraint firstItem="x9z-aw-HGJ" firstAttribute="trailing" secondItem="LdS-a1-Plx" secondAttribute="trailing" id="sZ3-Ut-pja"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x9z-aw-HGJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="幸运选号" id="Ipj-k4-OVj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xbs-tL-RqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="301"/>
         </scene>
     </scenes>
     <resources>
@@ -223,6 +253,7 @@
         <image name="discovery_luckyBet_title" width="96" height="23"/>
         <image name="discovery_news_icon" width="115" height="79"/>
         <image name="discovery_news_title" width="55" height="23"/>
+        <image name="luck_entry_background" width="320" height="368"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -43,7 +43,9 @@ class MDTabBarViewController: UITabBarController {
     
     private func setupTabBar() {
         //定义一个与系统TabBar的frame一样大小的
-        let tabbar = MDTabBar(frame: self.tabBar.frame)
+//        let tabbar = MDTabBar(frame: self.tabBar.frame)
+        //2.修改frame为bounds
+        let tabbar = MDTabBar(frame: self.tabBar.bounds)
         //获取图片
         for i in (0..<Const.VCCOUNT) {
             let norName = "TabBar\(i+1)"
@@ -52,8 +54,9 @@ class MDTabBarViewController: UITabBarController {
             tabbar.addButtonWithImage(image: norName, selImage: selName)
         }
         //将MDTabBar添加到View上
-        self.view.addSubview(tabbar)
-        
+//        self.view.addSubview(tabbar)
+        //1.添加到系统的tabbar上方便用系统的移除操作
+        self.tabBar.addSubview(tabbar)
         //实现block
         tabbar.selectItemBlock = { (index) in
             //通过系统的TabBar的selectedIndex来切换控制器
