@@ -76,6 +76,33 @@ class MDSettingController: UITableViewController {
             let image = UIImage(named: icon)
             cell?.imageView?.image = image
         }
+        //通过plist中类型判断View类型在动态的设置accessoryView
+        if let accesoryType = cellInfo["accessoryType"] as? String {
+            let clz = NSClassFromString(accesoryType)
+            debugPrint("view ---> \(clz)")
+            let viewcls = clz as! UIView.Type
+            let view = viewcls.init()
+            if view.isKind(of: UIImageView.self) {
+                let accesoryView = cellInfo["accessoryView"] as? String
+                let iv = view as! UIImageView
+                iv.image = UIImage(named: accesoryView!)
+                //设置大小：否则不显示
+                iv.sizeToFit()
+            }
+            cell?.accessoryView = view
+        }
+        
+        
+//        if let accesoryView = cellInfo["accessoryView"] as? String {
+//            let iv = UIImageView()
+//            iv.image = UIImage(named: accesoryView)
+//            //设置大小：否则不显示
+//            iv.sizeToFit()
+//            cell?.accessoryView = iv
+//        }
+        
+        
+        
         return cell!
     }
     
