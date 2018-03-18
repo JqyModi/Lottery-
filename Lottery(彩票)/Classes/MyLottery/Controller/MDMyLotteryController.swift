@@ -17,7 +17,11 @@ class MDMyLotteryController: UIViewController {
         //切割图片解决图片模糊背景
         setLoginBtnBg()
     }
-
+    @IBAction func settingDidClicked(_ sender: UIBarButtonItem) {
+        let setting = MDSettingController()
+        self.navigationController?.pushViewController(setting, animated: true)
+    }
+    
     private func setLoginBtnBg() {
         //获取背景图片
         var bgImage = loginBtn.backgroundImage(for: .normal)

@@ -76,7 +76,11 @@
                                 <state key="normal" title="客服" image="FBMM_Barbutton"/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Mylottery_config" id="gh7-hC-oAX"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Mylottery_config" id="gh7-hC-oAX">
+                            <connections>
+                                <action selector="settingDidClicked:" destination="36x-hF-q6v" id="NEX-0S-ABN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="loginBtn" destination="nwv-j6-Orm" id="Fz9-vw-N1W"/>
