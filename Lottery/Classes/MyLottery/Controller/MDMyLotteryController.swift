@@ -21,6 +21,7 @@ class MDMyLotteryController: UIViewController {
         let setting = MDSettingController()
         //设置标题
         setting.title = "设置"
+        setting.plistName = "setting"
         self.navigationController?.pushViewController(setting, animated: true)
     }
     

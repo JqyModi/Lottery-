@@ -9,14 +9,21 @@
 import UIKit
 
 class MDSettingController: UITableViewController {
+    
+    var plistName: String = "" {
+        didSet {
+            initData()
+        }
+    }
 
-    var groups: NSArray = {
-        var arr = NSArray()
-        let path = Bundle.main.path(forResource: "setting", ofType: "plist")
-        arr = NSArray(contentsOfFile: path!)!
-        debugPrint("arr --> \(arr)")
-        return arr
-    }()
+    var groups: NSArray = NSArray()
+//    var groups: NSArray = {
+//        var arr = NSArray()
+//        let path = Bundle.main.path(forResource: "setting", ofType: "plist")
+//        arr = NSArray(contentsOfFile: path!)!
+//        debugPrint("arr --> \(arr)")
+//        return arr
+//    }()
     
     
     //重写构造方法实现分组table
@@ -30,6 +37,14 @@ class MDSettingController: UITableViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func initData() {
+        var arr = NSArray()
+        let path = Bundle.main.path(forResource: self.plistName, ofType: "plist")
+        arr = NSArray(contentsOfFile: path!)!
+        debugPrint("arr --> \(arr)")
+        self.groups = arr
     }
     
     override func viewDidLoad() {
@@ -55,24 +70,48 @@ class MDSettingController: UITableViewController {
         let item = group["items"] as! NSArray
         return (item.count)
     }
+    
+    private func getCellStyle(cs: String) -> UITableViewCellStyle {
+        var style: UITableViewCellStyle?
+        switch cs {
+        case "default":
+            style = UITableViewCellStyle.default
+        case "value1":
+            style = UITableViewCellStyle.value1
+        case "value2":
+            style = UITableViewCellStyle.value2
+        case "subtitle":
+            style = UITableViewCellStyle.subtitle
+        default:
+            style = UITableViewCellStyle.default
+        }
+        return style!
+    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let ID = "CELL"
-        var cell = tableView.dequeueReusableCell(withIdentifier: ID)
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: ID)
-        }
         //获取组
         let group = groups.object(at: indexPath.section) as! NSDictionary
         let item = group["items"] as! NSArray
         let cellInfo = item[indexPath.row] as! NSDictionary
         
+        let ID = "CELL"
+        var cell = tableView.dequeueReusableCell(withIdentifier: ID)
+        if cell == nil {
+            if let cellStyle = cellInfo["cellStyle"] as? String {
+                cell = UITableViewCell(style: getCellStyle(cs: cellStyle), reuseIdentifier: ID)
+            }else {
+                cell = UITableViewCell(style: .default, reuseIdentifier: ID)
+            }
+        }
+        
         //设置标题文字
         cell?.textLabel?.text = cellInfo["title"] as! String
+        //设置副标题：为空默认不显示
+        cell?.detailTextLabel?.text = cellInfo["subTitle"] as! String
+        
         //设置图标
-        let icon = cellInfo["icon"] as! String
-        if !icon.isEmpty {
+        if let icon = cellInfo["icon"] as? String {
             let image = UIImage(named: icon)
             cell?.imageView?.image = image
         }
@@ -105,6 +144,13 @@ class MDSettingController: UITableViewController {
         //判断targetVC   targetVC
         if let targetType = cellInfo["targetVC"] as? String {
             let vc = getVCByClassString(targetType)
+            //判断是否是相同模板的设置界面跳转
+            if (vc?.isKind(of: MDSettingController.self))! {
+                let targetPlist = cellInfo["targetPlist"] as? String
+                let targetVC = vc as! MDSettingController
+                targetVC.plistName = targetPlist!
+            }
+            
             //设置控制器属性
             let title = cellInfo["title"] as? String
             vc?.title = title
@@ -112,6 +158,7 @@ class MDSettingController: UITableViewController {
             self.navigationController?.pushViewController(vc!, animated: true)
             
         }
+        
     }
 }
 

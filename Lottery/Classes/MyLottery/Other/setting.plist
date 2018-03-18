@@ -33,6 +33,10 @@
 				<string>推送和提醒</string>
 				<key>accessoryType</key>
 				<string>UISlider</string>
+				<key>targetVC</key>
+				<string>MDSettingController</string>
+				<key>targetPlist</key>
+				<string>push</string>
 			</dict>
 			<dict>
 				<key>icon</key>

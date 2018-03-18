@@ -12,6 +12,8 @@
 		040A7C5120590BB00037E17A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040A7C4F20590BB00037E17A /* LaunchScreen.storyboard */; };
 		04167986205C9ACA008C5BCD /* MDGroupBuyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04167985205C9ACA008C5BCD /* MDGroupBuyController.swift */; };
 		04523262205C974F007E5989 /* MDDiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04523261205C974F007E5989 /* MDDiscoveryController.swift */; };
+		04536CA1205E8643009F25FB /* push.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04536CA0205E8643009F25FB /* push.plist */; };
+		04536CA3205E99A1009F25FB /* pushLottery.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04536CA2205E99A0009F25FB /* pushLottery.plist */; };
 		04747079205E3DA100887072 /* MDSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04747078205E3DA100887072 /* MDSettingController.swift */; };
 		0474707B205E3FFA00887072 /* setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0474707A205E3FFA00887072 /* setting.plist */; };
 		0474707D205E5B2B00887072 /* MDRedeemCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474707C205E5B2B00887072 /* MDRedeemCodeController.swift */; };
@@ -49,6 +51,8 @@
 		040A7C5220590BB00037E17A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04167985205C9ACA008C5BCD /* MDGroupBuyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDGroupBuyController.swift; sourceTree = "<group>"; };
 		04523261205C974F007E5989 /* MDDiscoveryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDiscoveryController.swift; sourceTree = "<group>"; };
+		04536CA0205E8643009F25FB /* push.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = push.plist; sourceTree = "<group>"; };
+		04536CA2205E99A0009F25FB /* pushLottery.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pushLottery.plist; sourceTree = "<group>"; };
 		04747078205E3DA100887072 /* MDSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDSettingController.swift; sourceTree = "<group>"; };
 		0474707A205E3FFA00887072 /* setting.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = setting.plist; path = Lottery/Classes/MyLottery/Other/setting.plist; sourceTree = SOURCE_ROOT; };
 		0474707C205E5B2B00887072 /* MDRedeemCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDRedeemCodeController.swift; sourceTree = "<group>"; };
@@ -412,7 +416,9 @@
 		04860C5A205B67F7007F8B96 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				04536CA2205E99A0009F25FB /* pushLottery.plist */,
 				0474707A205E3FFA00887072 /* setting.plist */,
+				04536CA0205E8643009F25FB /* push.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 				04860C65205B67F7007F8B96 /* View.xib in Resources */,
 				04860C61205B67F7007F8B96 /* View.xib in Resources */,
 				04860C2E205B67A5007F8B96 /* View.xib in Resources */,
+				04536CA1205E8643009F25FB /* push.plist in Resources */,
 				04860C5F205B67F7007F8B96 /* View.xib in Resources */,
 				04860C66205B67F7007F8B96 /* View.xib in Resources */,
 				0474707B205E3FFA00887072 /* setting.plist in Resources */,
@@ -496,6 +503,7 @@
 				040A7C5120590BB00037E17A /* LaunchScreen.storyboard in Resources */,
 				04860C63205B67F7007F8B96 /* View.xib in Resources */,
 				04860C5E205B67F7007F8B96 /* Arena.storyboard in Resources */,
+				04536CA3205E99A1009F25FB /* pushLottery.plist in Resources */,
 				04860C67205B67F7007F8B96 /* MyLottery.storyboard in Resources */,
 				040A7C4E20590BB00037E17A /* Assets.xcassets in Resources */,
 				04860C60205B67F7007F8B96 /* Discovery.storyboard in Resources */,
