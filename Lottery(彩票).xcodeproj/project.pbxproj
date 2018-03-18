@@ -14,6 +14,7 @@
 		04523262205C974F007E5989 /* MDDiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04523261205C974F007E5989 /* MDDiscoveryController.swift */; };
 		04747079205E3DA100887072 /* MDSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04747078205E3DA100887072 /* MDSettingController.swift */; };
 		0474707B205E3FFA00887072 /* setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0474707A205E3FFA00887072 /* setting.plist */; };
+		0474707D205E5B2B00887072 /* MDRedeemCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474707C205E5B2B00887072 /* MDRedeemCodeController.swift */; };
 		04860C2E205B67A5007F8B96 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04860C2D205B67A5007F8B96 /* View.xib */; };
 		04860C5E205B67F7007F8B96 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04860C35205B67F7007F8B96 /* Arena.storyboard */; };
 		04860C5F205B67F7007F8B96 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04860C36205B67F7007F8B96 /* View.xib */; };
@@ -50,6 +51,7 @@
 		04523261205C974F007E5989 /* MDDiscoveryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDiscoveryController.swift; sourceTree = "<group>"; };
 		04747078205E3DA100887072 /* MDSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDSettingController.swift; sourceTree = "<group>"; };
 		0474707A205E3FFA00887072 /* setting.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = setting.plist; path = "Lottery(彩票)/Classes/MyLottery/Controller/setting.plist"; sourceTree = SOURCE_ROOT; };
+		0474707C205E5B2B00887072 /* MDRedeemCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDRedeemCodeController.swift; sourceTree = "<group>"; };
 		04860C2D205B67A5007F8B96 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		04860C35205B67F7007F8B96 /* Arena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arena.storyboard; sourceTree = "<group>"; };
 		04860C36205B67F7007F8B96 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			children = (
 				04EEA67E205CC97300E0DB0A /* MDMyLotteryController.swift */,
 				04747078205E3DA100887072 /* MDSettingController.swift */,
+				0474707C205E5B2B00887072 /* MDRedeemCodeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				04860C72205B9AA5007F8B96 /* MDArenaViewController.swift in Sources */,
 				04167986205C9ACA008C5BCD /* MDGroupBuyController.swift in Sources */,
 				04860C74205BA089007F8B96 /* MDHallViewController.swift in Sources */,
+				0474707D205E5B2B00887072 /* MDRedeemCodeController.swift in Sources */,
 				040A7C4720590BB00037E17A /* AppDelegate.swift in Sources */,
 				04860C6A205B6842007F8B96 /* MDTabBarViewController.swift in Sources */,
 				04747079205E3DA100887072 /* MDSettingController.swift in Sources */,
