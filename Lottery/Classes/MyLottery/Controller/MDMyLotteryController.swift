@@ -19,6 +19,8 @@ class MDMyLotteryController: UIViewController {
     }
     @IBAction func settingDidClicked(_ sender: UIBarButtonItem) {
         let setting = MDSettingController()
+        //设置标题
+        setting.title = "设置"
         self.navigationController?.pushViewController(setting, animated: true)
     }
     

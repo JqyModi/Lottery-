@@ -104,40 +104,18 @@ class MDSettingController: UITableViewController {
         
         //判断targetVC   targetVC
         if let targetType = cellInfo["targetVC"] as? String {
-//            let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
-//            let clz = NSClassFromString(namespace + "." + targetType)
-//            debugPrint("view ---> \(clz)")
-//            let vccls = clz as! UIViewController.Type
-//            let targetVC = vccls.init()
-//            //设置控制器属性
-//            let title = cellInfo["title"] as? String
-//            targetVC.title = title
-//            //跳转控制器
-//            self.navigationController?.pushViewController(targetVC, animated: true)
-//            let vc = getVCByClassString(targetType)
-//            //设置控制器属性
-//            let title = cellInfo["title"] as? String
-//            vc?.title = title
-//            //跳转控制器
-//            self.navigationController?.pushViewController(vc!, animated: true)
+            let vc = getVCByClassString(targetType)
+            //设置控制器属性
+            let title = cellInfo["title"] as? String
+            vc?.title = title
+            //跳转控制器
+            self.navigationController?.pushViewController(vc!, animated: true)
             
-            
-            let name = targetType
-            //动态获取命名空间
-            let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
-            print(namespace)
-            //注意工程中必须有相关的类，否则程序会crash
-            let class1:AnyObject = NSClassFromString(namespace + "." + name)!
-            print(class1)
-            // 告诉编译器它的真实类型
-            let viewControllerClass = class1 as! UIViewController.Type
-            let viewController = viewControllerClass.init()
-            print(viewController)
         }
     }
 }
 
-//MARK: -- 根据类文件字符串转换为ViewController
+//MARK: -- 根据类文件字符串转换为ViewController：自定义的类需要重写初始化方法：init否则报空nil
 extension MDSettingController
 {
     /// 类文件字符串转换为ViewController
@@ -153,7 +131,7 @@ extension MDSettingController
         }
         // 2.通过命名空间和类名转换成类
         let cls : AnyClass? = NSClassFromString((clsName as! String) + "." + childControllerName)
-        
+        debugPrint(clsName)
         // swift 中通过Class创建一个对象,必须告诉系统Class的类型
         guard let clsType = cls as? UIViewController.Type else {
             print("无法转换成UIViewController")

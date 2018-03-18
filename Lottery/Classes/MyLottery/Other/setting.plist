@@ -15,7 +15,7 @@
 				<key>accessoryView</key>
 				<string>arrow_right</string>
 				<key>targetVC</key>
-				<string>UITableViewController</string>
+				<string>MDRedeemCodeController</string>
 			</dict>
 		</array>
 		<key>header</key>

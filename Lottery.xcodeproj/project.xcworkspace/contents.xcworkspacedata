@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Lottery(&#x5f69;&#x7968;).xcodeproj">
+      location = "self:/Users/mac/Documents/GitHub/Lottery/Lottery.xcodeproj">
    </FileRef>
 </Workspace>

@@ -42,7 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040A7C4320590BB00037E17A /* Lottery(彩票).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lottery(彩票).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		040A7C4320590BB00037E17A /* Lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		040A7C4620590BB00037E17A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		040A7C4D20590BB00037E17A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040A7C5020590BB00037E17A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		04167985205C9ACA008C5BCD /* MDGroupBuyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDGroupBuyController.swift; sourceTree = "<group>"; };
 		04523261205C974F007E5989 /* MDDiscoveryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDiscoveryController.swift; sourceTree = "<group>"; };
 		04747078205E3DA100887072 /* MDSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDSettingController.swift; sourceTree = "<group>"; };
-		0474707A205E3FFA00887072 /* setting.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = setting.plist; path = "Lottery(彩票)/Classes/MyLottery/Controller/setting.plist"; sourceTree = SOURCE_ROOT; };
+		0474707A205E3FFA00887072 /* setting.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = setting.plist; path = Lottery/Classes/MyLottery/Other/setting.plist; sourceTree = SOURCE_ROOT; };
 		0474707C205E5B2B00887072 /* MDRedeemCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDRedeemCodeController.swift; sourceTree = "<group>"; };
 		04860C2D205B67A5007F8B96 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		04860C35205B67F7007F8B96 /* Arena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arena.storyboard; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		040A7C3A20590BB00037E17A = {
 			isa = PBXGroup;
 			children = (
-				040A7C4520590BB00037E17A /* Lottery(彩票) */,
+				040A7C4520590BB00037E17A /* Lottery */,
 				040A7C4420590BB00037E17A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,12 +100,12 @@
 		040A7C4420590BB00037E17A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				040A7C4320590BB00037E17A /* Lottery(彩票).app */,
+				040A7C4320590BB00037E17A /* Lottery.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		040A7C4520590BB00037E17A /* Lottery(彩票) */ = {
+		040A7C4520590BB00037E17A /* Lottery */ = {
 			isa = PBXGroup;
 			children = (
 				04860C2F205B67F7007F8B96 /* Classes */,
@@ -114,7 +114,7 @@
 				04860C2A205B6627007F8B96 /* Common */,
 				040A7C5820590D2E0037E17A /* Support Files */,
 			);
-			path = "Lottery(彩票)";
+			path = Lottery;
 			sourceTree = "<group>";
 		};
 		040A7C5820590D2E0037E17A /* Support Files */ = {
@@ -428,9 +428,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		040A7C4220590BB00037E17A /* Lottery(彩票) */ = {
+		040A7C4220590BB00037E17A /* Lottery */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 040A7C5520590BB00037E17A /* Build configuration list for PBXNativeTarget "Lottery(彩票)" */;
+			buildConfigurationList = 040A7C5520590BB00037E17A /* Build configuration list for PBXNativeTarget "Lottery" */;
 			buildPhases = (
 				040A7C3F20590BB00037E17A /* Sources */,
 				040A7C4020590BB00037E17A /* Frameworks */,
@@ -440,9 +440,9 @@
 			);
 			dependencies = (
 			);
-			name = "Lottery(彩票)";
+			name = Lottery;
 			productName = "Lottery(彩票)";
-			productReference = 040A7C4320590BB00037E17A /* Lottery(彩票).app */;
+			productReference = 040A7C4320590BB00037E17A /* Lottery.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -462,7 +462,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 040A7C3E20590BB00037E17A /* Build configuration list for PBXProject "Lottery(彩票)" */;
+			buildConfigurationList = 040A7C3E20590BB00037E17A /* Build configuration list for PBXProject "Lottery" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -475,7 +475,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				040A7C4220590BB00037E17A /* Lottery(彩票) */,
+				040A7C4220590BB00037E17A /* Lottery */,
 			);
 		};
 /* End PBXProject section */
@@ -658,7 +658,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJ2S6KBYBK;
-				INFOPLIST_FILE = "$(SRCROOT)/Lottery(彩票)/Support Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Lottery/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.modi.Lottery----";
@@ -675,7 +675,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJ2S6KBYBK;
-				INFOPLIST_FILE = "$(SRCROOT)/Lottery(彩票)/Support Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Lottery/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.modi.Lottery----";
@@ -688,7 +688,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		040A7C3E20590BB00037E17A /* Build configuration list for PBXProject "Lottery(彩票)" */ = {
+		040A7C3E20590BB00037E17A /* Build configuration list for PBXProject "Lottery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				040A7C5320590BB00037E17A /* Debug */,
@@ -697,7 +697,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		040A7C5520590BB00037E17A /* Build configuration list for PBXNativeTarget "Lottery(彩票)" */ = {
+		040A7C5520590BB00037E17A /* Build configuration list for PBXNativeTarget "Lottery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				040A7C5620590BB00037E17A /* Debug */,
