@@ -16,6 +16,10 @@ private let reuseIdentifier = "Cell"
  */
 class MDGuideController: UICollectionViewController {
     
+    var largeImageV: UIImageView?
+    var largeTextImageV: UIImageView?
+    var smallTextImageV: UIImageView?
+    
     init() {
         let layout = UICollectionViewFlowLayout()
         //设置布局属性
@@ -53,6 +57,10 @@ class MDGuideController: UICollectionViewController {
         let largeImageV = UIImageView(image: UIImage(named: "guide1"))
         let largeTextImageV = UIImageView(image: UIImage(named: "guideLargeText1"))
         let smallTextImageV = UIImageView(image: UIImage(named: "guideSmallText1"))
+        
+        self.largeImageV = largeImageV
+        self.largeTextImageV = largeTextImageV
+        self.smallTextImageV = smallTextImageV
         
         //添加到collectionView上
         self.collectionView?.addSubview(largeImageV)
@@ -100,5 +108,14 @@ class MDGuideController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
-
+    // MARK: UIScrollViewDelegate
+    override func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        //开始减速时将图片偏移量改变为当前Cell偏移的offset
+        
+        //1.获取View：通过引用获取
+        //2.改变x = offset
+        self.largeImageV?.x = scrollView.contentOffset.x
+        self.largeTextImageV?.x = scrollView.contentOffset.x
+        self.smallTextImageV?.x = scrollView.contentOffset.x
+    }
 }
