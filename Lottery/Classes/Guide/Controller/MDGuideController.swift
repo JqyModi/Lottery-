@@ -36,7 +36,7 @@ class MDGuideController: UICollectionViewController {
         super.viewDidLoad()
 
         self.collectionView?.backgroundColor = defaultBackgroundColor
-        
+        setupUI()
         configStyle()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -47,6 +47,23 @@ class MDGuideController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
+    private func setupUI() {
+        //添加动画图片到collectionView上不跟随Cell滑动：要滑动改变x或y值即可
+        //获取图片
+        let largeImageV = UIImageView(image: UIImage(named: "guide1"))
+        let largeTextImageV = UIImageView(image: UIImage(named: "guideLargeText1"))
+        let smallTextImageV = UIImageView(image: UIImage(named: "guideSmallText1"))
+        
+        //添加到collectionView上
+        self.collectionView?.addSubview(largeImageV)
+        self.collectionView?.addSubview(largeTextImageV)
+        self.collectionView?.addSubview(smallTextImageV)
+        
+        //设置位置
+        largeTextImageV.y = screenHeight * 0.75
+        smallTextImageV.y = screenHeight * 0.85
+    }
+    
     private func configStyle() {
         //隐藏滚动条
         self.collectionView?.showsHorizontalScrollIndicator = false
