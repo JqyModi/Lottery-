@@ -59,7 +59,13 @@ class MDSettingTableViewCell: UITableViewCell {
     }
     
     class func cellForItem(tableView: UITableView, item: NSDictionary) -> MDSettingTableViewCell {
-        let ID = "CELL"
+        
+        //重用ID：当Cell的style类型不同时用同一个ID会出现两种不同类型的Cell错误显示：不同类型需要设置不同重用ID
+        var ID = "CELL"
+        if let cellStyle = item["cellStyle"] as? String {
+            ID = cellStyle
+        }
+        
         var cell = tableView.dequeueReusableCell(withIdentifier: ID) as? MDSettingTableViewCell
         if cell == nil {
             if let cellStyle = item["cellStyle"] as? String {
