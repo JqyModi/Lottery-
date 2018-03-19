@@ -24,6 +24,10 @@
 				<string>UIImageView</string>
 				<key>accessoryView</key>
 				<string>arrow_right</string>
+				<key>targetVC</key>
+				<string>MDLiveSettingController</string>
+				<key>targetPlist</key>
+				<string>pushScore</string>
 			</dict>
 			<dict>
 				<key>title</key>

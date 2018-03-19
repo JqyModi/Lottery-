@@ -71,22 +71,7 @@ class MDSettingController: UITableViewController {
         return (item.count)
     }
     
-    private func getCellStyle(cs: String) -> UITableViewCellStyle {
-        var style: UITableViewCellStyle?
-        switch cs {
-        case "default":
-            style = UITableViewCellStyle.default
-        case "value1":
-            style = UITableViewCellStyle.value1
-        case "value2":
-            style = UITableViewCellStyle.value2
-        case "subtitle":
-            style = UITableViewCellStyle.subtitle
-        default:
-            style = UITableViewCellStyle.default
-        }
-        return style!
-    }
+
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -94,44 +79,10 @@ class MDSettingController: UITableViewController {
         let group = groups.object(at: indexPath.section) as! NSDictionary
         let item = group["items"] as! NSArray
         let cellInfo = item[indexPath.row] as! NSDictionary
-        
-        let ID = "CELL"
-        var cell = tableView.dequeueReusableCell(withIdentifier: ID)
-        if cell == nil {
-            if let cellStyle = cellInfo["cellStyle"] as? String {
-                cell = UITableViewCell(style: getCellStyle(cs: cellStyle), reuseIdentifier: ID)
-            }else {
-                cell = UITableViewCell(style: .default, reuseIdentifier: ID)
-            }
-        }
-        
-        //设置标题文字
-        cell?.textLabel?.text = cellInfo["title"] as! String
-        //设置副标题：为空默认不显示
-        cell?.detailTextLabel?.text = cellInfo["subTitle"] as! String
-        
-        //设置图标
-        if let icon = cellInfo["icon"] as? String {
-            let image = UIImage(named: icon)
-            cell?.imageView?.image = image
-        }
-        //通过plist中类型判断View类型在动态的设置accessoryView
-        if let accesoryType = cellInfo["accessoryType"] as? String {
-            let clz = NSClassFromString(accesoryType)
-            debugPrint("view ---> \(clz)")
-            let viewcls = clz as! UIView.Type
-            let view = viewcls.init()
-            if view.isKind(of: UIImageView.self) {
-                let accesoryView = cellInfo["accessoryView"] as? String
-                let iv = view as! UIImageView
-                iv.image = UIImage(named: accesoryView!)
-                //设置大小：否则不显示
-                iv.sizeToFit()
-            }
-            cell?.accessoryView = view
-        }
-        
-        return cell!
+        let cell = MDSettingTableViewCell.cellForItem(tableView: tableView, item: cellInfo)
+        //设置数据
+        cell.cellInfo = cellInfo
+        return cell
     }
     
     //处理点击事件
@@ -156,10 +107,10 @@ class MDSettingController: UITableViewController {
             vc?.title = title
             //跳转控制器
             self.navigationController?.pushViewController(vc!, animated: true)
-            
         }
-        
     }
+    
+    //选中行响应
 }
 
 //MARK: -- 根据类文件字符串转换为ViewController：自定义的类需要重写初始化方法：init否则报空nil
