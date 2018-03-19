@@ -100,6 +100,10 @@ class MDSettingController: UITableViewController {
                 let targetPlist = cellInfo["targetPlist"] as? String
                 let targetVC = vc as! MDSettingController
                 targetVC.plistName = targetPlist!
+            }else if (vc?.isKind(of: MDProductController.self))! {
+                let targetVC = vc as! MDProductController
+                
+                
             }
             
             //设置控制器属性

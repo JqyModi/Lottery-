@@ -106,6 +106,8 @@
 				<string>UIImageView</string>
 				<key>accessoryView</key>
 				<string>arrow_right</string>
+				<key>targetVC</key>
+				<string>MDProductController</string>
 			</dict>
 			<dict>
 				<key>icon</key>

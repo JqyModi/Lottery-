@@ -48,6 +48,11 @@
 		04F77178205F666E00F5CBDA /* MDAboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77177205F666E00F5CBDA /* MDAboutController.swift */; };
 		04F7717A205F672E00F5CBDA /* AboutHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F77179205F672E00F5CBDA /* AboutHeaderView.xib */; };
 		04F7717C205F679800F5CBDA /* MDAboutHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7717B205F679800F5CBDA /* MDAboutHeaderView.swift */; };
+		04F77181205F6C3D00F5CBDA /* more_project.json in Resources */ = {isa = PBXBuildFile; fileRef = 04F77180205F6C3C00F5CBDA /* more_project.json */; };
+		04F77183205F828000F5CBDA /* MDProductController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77182205F828000F5CBDA /* MDProductController.swift */; };
+		04F77185205F829B00F5CBDA /* MDProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77184205F829B00F5CBDA /* MDProduct.swift */; };
+		04F77187205F8E6B00F5CBDA /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F77186205F8E6B00F5CBDA /* ProductCell.xib */; };
+		04F77189205F8F1F00F5CBDA /* MDProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77188205F8F1F00F5CBDA /* MDProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +99,12 @@
 		04F77177205F666E00F5CBDA /* MDAboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDAboutController.swift; sourceTree = "<group>"; };
 		04F77179205F672E00F5CBDA /* AboutHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutHeaderView.xib; sourceTree = "<group>"; };
 		04F7717B205F679800F5CBDA /* MDAboutHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDAboutHeaderView.swift; sourceTree = "<group>"; };
+		04F7717D205F6A5900F5CBDA /* productjson.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = productjson.geojson; sourceTree = "<group>"; };
+		04F77180205F6C3C00F5CBDA /* more_project.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = more_project.json; sourceTree = "<group>"; };
+		04F77182205F828000F5CBDA /* MDProductController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDProductController.swift; sourceTree = "<group>"; };
+		04F77184205F829B00F5CBDA /* MDProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MDProduct.swift; path = Lottery/Classes/MyLottery/Model/MDProduct.swift; sourceTree = SOURCE_ROOT; };
+		04F77186205F8E6B00F5CBDA /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		04F77188205F8F1F00F5CBDA /* MDProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +434,7 @@
 		04860C59205B67F7007F8B96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04F77184205F829B00F5CBDA /* MDProduct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -430,11 +442,13 @@
 		04860C5A205B67F7007F8B96 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				04F77180205F6C3C00F5CBDA /* more_project.json */,
 				04F77175205F652700F5CBDA /* about.plist */,
 				04F77170205F45C100F5CBDA /* pushScore.plist */,
 				04536CA2205E99A0009F25FB /* pushLottery.plist */,
 				0474707A205E3FFA00887072 /* setting.plist */,
 				04536CA0205E8643009F25FB /* push.plist */,
+				04F7717D205F6A5900F5CBDA /* productjson.geojson */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -446,6 +460,8 @@
 				0434F78B205F39F3008F53C5 /* MDSettingTableViewCell.swift */,
 				04F77179205F672E00F5CBDA /* AboutHeaderView.xib */,
 				04F7717B205F679800F5CBDA /* MDAboutHeaderView.swift */,
+				04F77186205F8E6B00F5CBDA /* ProductCell.xib */,
+				04F77188205F8F1F00F5CBDA /* MDProductCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,6 +472,7 @@
 				0474707C205E5B2B00887072 /* MDRedeemCodeController.swift */,
 				04F77173205F4DBD00F5CBDA /* MDLiveSettingController.swift */,
 				04F77177205F666E00F5CBDA /* MDAboutController.swift */,
+				04F77182205F828000F5CBDA /* MDProductController.swift */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -533,9 +550,11 @@
 				040A7C5120590BB00037E17A /* LaunchScreen.storyboard in Resources */,
 				04F7717A205F672E00F5CBDA /* AboutHeaderView.xib in Resources */,
 				04860C63205B67F7007F8B96 /* View.xib in Resources */,
+				04F77181205F6C3D00F5CBDA /* more_project.json in Resources */,
 				04F77176205F652700F5CBDA /* about.plist in Resources */,
 				04860C5E205B67F7007F8B96 /* Arena.storyboard in Resources */,
 				04536CA3205E99A1009F25FB /* pushLottery.plist in Resources */,
+				04F77187205F8E6B00F5CBDA /* ProductCell.xib in Resources */,
 				04860C67205B67F7007F8B96 /* MyLottery.storyboard in Resources */,
 				040A7C4E20590BB00037E17A /* Assets.xcassets in Resources */,
 				04860C60205B67F7007F8B96 /* Discovery.storyboard in Resources */,
@@ -552,10 +571,12 @@
 			files = (
 				04860C6E205B7162007F8B96 /* MDTabBarButton.swift in Sources */,
 				04EEA67D205CBE6700E0DB0A /* MDLuckyController.swift in Sources */,
+				04F77183205F828000F5CBDA /* MDProductController.swift in Sources */,
 				04860C72205B9AA5007F8B96 /* MDArenaViewController.swift in Sources */,
 				04167986205C9ACA008C5BCD /* MDGroupBuyController.swift in Sources */,
 				04860C74205BA089007F8B96 /* MDHallViewController.swift in Sources */,
 				0474707D205E5B2B00887072 /* MDRedeemCodeController.swift in Sources */,
+				04F77185205F829B00F5CBDA /* MDProduct.swift in Sources */,
 				040A7C4720590BB00037E17A /* AppDelegate.swift in Sources */,
 				0434F78C205F39F3008F53C5 /* MDSettingTableViewCell.swift in Sources */,
 				04860C6A205B6842007F8B96 /* MDTabBarViewController.swift in Sources */,
@@ -564,6 +585,7 @@
 				04EEA679205CA10E00E0DB0A /* UIView+Extension.swift in Sources */,
 				04523262205C974F007E5989 /* MDDiscoveryController.swift in Sources */,
 				04EEA67B205CAB9400E0DB0A /* MDGroupBuyButton.swift in Sources */,
+				04F77189205F8F1F00F5CBDA /* MDProductCell.swift in Sources */,
 				04860C6C205B6C8B007F8B96 /* MDTabBar.swift in Sources */,
 				04860C70205B9383007F8B96 /* MDNavigationController.swift in Sources */,
 				04860C76205BA647007F8B96 /* PCH.swift in Sources */,
