@@ -53,6 +53,9 @@
 		04F77185205F829B00F5CBDA /* MDProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77184205F829B00F5CBDA /* MDProduct.swift */; };
 		04F77187205F8E6B00F5CBDA /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F77186205F8E6B00F5CBDA /* ProductCell.xib */; };
 		04F77189205F8F1F00F5CBDA /* MDProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77188205F8F1F00F5CBDA /* MDProductCell.swift */; };
+		04F77196205FA90900F5CBDA /* MDGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77195205FA90900F5CBDA /* MDGuideController.swift */; };
+		04F77198205FAC3100F5CBDA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77197205FAC3100F5CBDA /* UIColor+Extension.swift */; };
+		04F7719A205FAFFB00F5CBDA /* MDGuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77199205FAFFB00F5CBDA /* MDGuideCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +108,9 @@
 		04F77184205F829B00F5CBDA /* MDProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MDProduct.swift; path = Lottery/Classes/MyLottery/Model/MDProduct.swift; sourceTree = SOURCE_ROOT; };
 		04F77186205F8E6B00F5CBDA /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		04F77188205F8F1F00F5CBDA /* MDProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDProductCell.swift; sourceTree = "<group>"; };
+		04F77195205FA90900F5CBDA /* MDGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDGuideController.swift; sourceTree = "<group>"; };
+		04F77197205FAC3100F5CBDA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		04F77199205FAFFB00F5CBDA /* MDGuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDGuideCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 			children = (
 				04860C75205BA647007F8B96 /* PCH.swift */,
 				04EEA678205CA10E00E0DB0A /* UIView+Extension.swift */,
+				04F77197205FAC3100F5CBDA /* UIColor+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -184,6 +191,7 @@
 		04860C2F205B67F7007F8B96 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04F77190205FA8E600F5CBDA /* Guide */,
 				04860C30205B67F7007F8B96 /* Arena */,
 				04860C3C205B67F7007F8B96 /* Discovery */,
 				04860C43205B67F7007F8B96 /* Hall */,
@@ -477,6 +485,47 @@
 			path = setting;
 			sourceTree = "<group>";
 		};
+		04F77190205FA8E600F5CBDA /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				04F77191205FA8E600F5CBDA /* Controller */,
+				04F77192205FA8E600F5CBDA /* Model */,
+				04F77193205FA8E600F5CBDA /* Other */,
+				04F77194205FA8E600F5CBDA /* View */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		04F77191205FA8E600F5CBDA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04F77195205FA90900F5CBDA /* MDGuideController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04F77192205FA8E600F5CBDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04F77193205FA8E600F5CBDA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		04F77194205FA8E600F5CBDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04F77199205FAFFB00F5CBDA /* MDGuideCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,6 +627,7 @@
 				0474707D205E5B2B00887072 /* MDRedeemCodeController.swift in Sources */,
 				04F77185205F829B00F5CBDA /* MDProduct.swift in Sources */,
 				040A7C4720590BB00037E17A /* AppDelegate.swift in Sources */,
+				04F77196205FA90900F5CBDA /* MDGuideController.swift in Sources */,
 				0434F78C205F39F3008F53C5 /* MDSettingTableViewCell.swift in Sources */,
 				04860C6A205B6842007F8B96 /* MDTabBarViewController.swift in Sources */,
 				04747079205E3DA100887072 /* MDSettingController.swift in Sources */,
@@ -590,7 +640,9 @@
 				04860C70205B9383007F8B96 /* MDNavigationController.swift in Sources */,
 				04860C76205BA647007F8B96 /* PCH.swift in Sources */,
 				04F77174205F4DBD00F5CBDA /* MDLiveSettingController.swift in Sources */,
+				04F7719A205FAFFB00F5CBDA /* MDGuideCell.swift in Sources */,
 				04F77178205F666E00F5CBDA /* MDAboutController.swift in Sources */,
+				04F77198205FAC3100F5CBDA /* UIColor+Extension.swift in Sources */,
 				04F7717C205F679800F5CBDA /* MDAboutHeaderView.swift in Sources */,
 				04860C78205BAF6A007F8B96 /* MDActivityView.swift in Sources */,
 			);

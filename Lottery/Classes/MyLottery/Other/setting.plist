@@ -86,6 +86,8 @@
 				<string>UIImageView</string>
 				<key>accessoryView</key>
 				<string>arrow_right</string>
+				<key>funcKey</key>
+				<string>checkUpdate</string>
 			</dict>
 			<dict>
 				<key>icon</key>

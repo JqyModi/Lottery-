@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow()
         
         //定义TabBarController
-        let tabBarController = MDTabBarViewController()
+        let tabBarController = selectCurrentController()
         
         //设置根布局
         self.window?.rootViewController = tabBarController
@@ -28,9 +28,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置为主窗口并显示
         self.window?.makeKeyAndVisible()
         
+        //保存当前最新版本号到沙盒
+        self.saveAppVersion()
+        
         return true
     }
 
+    //选择要加载的控制器：主页/新特性页
+    private func selectCurrentController() -> UIViewController {
+        if !(loadCurrentAppVersion() == loadAppVersion()) {
+            debugPrint("MDTabBarViewController")
+            return MDTabBarViewController()
+        }else {
+            debugPrint("newsController")
+//            let v = UIViewController()
+//            v.view.backgroundColor = UIColor.orange
+            return MDGuideController()
+        }
+    }
+    
+    //读取当前App版本号
+    private func loadCurrentAppVersion() -> String {
+        //获取当前版本号
+        let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+        debugPrint("appVersion1 ---> \(appVersion)")
+        return appVersion
+    }
+    
+    //读取沙盒保存的数据
+    private func loadAppVersion() -> String {
+        let ud = UserDefaults.standard
+        if let appVersion = ud.value(forKey: "appVersion") as? String {
+            debugPrint("appVersion2 ---> \(appVersion)")
+            return appVersion
+        }
+        return  ""
+    }
+    
+    //将当前版本号保存到沙盒
+    private func saveAppVersion() {
+        let appVersion = loadCurrentAppVersion()
+//        debugPrint("appVersion ---> \(appVersion)")
+        //保存
+        let ud = UserDefaults.standard
+        ud.set(appVersion, forKey: "appVersion")
+        //立即保存：同步
+        ud.synchronize()
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

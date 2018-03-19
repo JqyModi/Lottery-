@@ -13,3 +13,6 @@ let screenBounds = UIScreen.main.bounds
 let screenWidth = screenBounds.width
 let screenHeight = screenBounds.height
 
+//系统默认背景色
+let defaultBackgroundColor = UIColor.init(white: 1, alpha: 0.93)
+

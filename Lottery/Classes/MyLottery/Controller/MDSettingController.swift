@@ -100,10 +100,6 @@ class MDSettingController: UITableViewController {
                 let targetPlist = cellInfo["targetPlist"] as? String
                 let targetVC = vc as! MDSettingController
                 targetVC.plistName = targetPlist!
-            }else if (vc?.isKind(of: MDProductController.self))! {
-                let targetVC = vc as! MDProductController
-                
-                
             }
             
             //设置控制器属性
@@ -112,9 +108,21 @@ class MDSettingController: UITableViewController {
             //跳转控制器
             self.navigationController?.pushViewController(vc!, animated: true)
         }
+        
+        //判断plist中是否配置有funcKey参数：有就执行方法
+        if let funcKey = cellInfo["funcKey"] as? String {
+            //将字符串转为一个可执行方法
+            let sel = NSSelectorFromString(funcKey)
+            //执行配置的方法
+            self.perform(sel)
+        }
+        
     }
     
-    //选中行响应
+    @objc private func checkUpdate() {
+        debugPrint("当前已经是最新版本 ~ ")
+    }
+    
 }
 
 //MARK: -- 根据类文件字符串转换为ViewController：自定义的类需要重写初始化方法：init否则报空nil
