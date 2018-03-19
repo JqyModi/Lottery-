@@ -45,6 +45,8 @@
 				<string>摇一摇机选</string>
 				<key>accessoryType</key>
 				<string>UISwitch</string>
+				<key>switchKey</key>
+				<string>setting_01</string>
 			</dict>
 			<dict>
 				<key>icon</key>
@@ -53,6 +55,8 @@
 				<string>声音效果</string>
 				<key>accessoryType</key>
 				<string>UISwitch</string>
+				<key>switchKey</key>
+				<string>setting_02</string>
 			</dict>
 			<dict>
 				<key>icon</key>
@@ -61,6 +65,8 @@
 				<string>购彩小助手</string>
 				<key>accessoryType</key>
 				<string>UISwitch</string>
+				<key>switchKey</key>
+				<string>setting_03</string>
 			</dict>
 		</array>
 		<key>header</key>

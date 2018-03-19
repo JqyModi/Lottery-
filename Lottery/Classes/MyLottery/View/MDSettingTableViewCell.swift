@@ -53,9 +53,36 @@ class MDSettingTableViewCell: UITableViewCell {
                 iv.image = UIImage(named: accesoryView!)
                 //设置大小：否则不显示
                 iv.sizeToFit()
+            }else if view.isKind(of: UISwitch.self) {
+                let switcher = view as! UISwitch
+                //添加开关监听事件
+                switcher.addTarget(self, action: #selector(self.switchChange(sender:)), for: .valueChanged)
+                
+                //恢复开关状态
+                if let switchKey = cellInfo["switchKey"] as? String {
+                    let ud = UserDefaults.standard
+                    if let isOn = ud.value(forKey: switchKey) as? Bool {
+                        switcher.isOn = isOn
+                    }
+                }
+                
             }
             self.accessoryView = view
         }
+    }
+    
+    @objc private func switchChange(sender: UISwitch) {
+        //保存开关状态：userdefault
+        let ud = UserDefaults.standard
+        //根据不同的UISwitch设置不同的key
+        if let switchKey = cellInfo["switchKey"] as? String {
+            ud.set(sender.isOn, forKey: switchKey)
+            //同步:立即保存
+            ud.synchronize()
+            
+            debugPrint("Home ----> \(NSHomeDirectory())")
+        }
+        
     }
     
     class func cellForItem(tableView: UITableView, item: NSDictionary) -> MDSettingTableViewCell {

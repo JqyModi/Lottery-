@@ -16,6 +16,8 @@
 				<string>UISwitch</string>
 				<key>cellStyle</key>
 				<string>subtitle</string>
+				<key>switchKey</key>
+				<string>pushScore_01</string>
 			</dict>
 		</array>
 		<key>header</key>

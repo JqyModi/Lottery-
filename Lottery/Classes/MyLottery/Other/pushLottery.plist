@@ -16,6 +16,8 @@
 				<string>UISwitch</string>
 				<key>cellStyle</key>
 				<string>subtitle</string>
+				<key>switchKey</key>
+				<string>pushLottery_01</string>
 			</dict>
 			<dict>
 				<key>icon</key>
@@ -28,6 +30,8 @@
 				<string>双色球每周2.4.6开奖</string>
 				<key>cellStyle</key>
 				<string>subtitle</string>
+				<key>switchKey</key>
+				<string>pushLottery_02</string>
 			</dict>
 			<dict>
 				<key>icon</key>
@@ -40,6 +44,8 @@
 				<string>双色球每周2.4.6开奖</string>
 				<key>cellStyle</key>
 				<string>subtitle</string>
+				<key>switchKey</key>
+				<string>pushLottery_03</string>
 			</dict>
 		</array>
 		<key>header</key>
