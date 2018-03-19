@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>评分支持</string>
+				<key>accessoryType</key>
+				<string>UIImageView</string>
+				<key>accessoryView</key>
+				<string>arrow_right</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>客服热线</string>
+				<key>subTitle</key>
+				<string>10000</string>
+				<key>accessoryType</key>
+				<string>UIImageView</string>
+				<key>accessoryView</key>
+				<string>arrow_right</string>
+				<key>cellStyle</key>
+				<string>value1</string>
+			</dict>
+		</array>
+		<key>header</key>
+		<string>因为我刚好遇见你</string>
+		<key>footer</key>
+		<string>可惜我是水瓶座</string>
+	</dict>
+</array>
+</plist>

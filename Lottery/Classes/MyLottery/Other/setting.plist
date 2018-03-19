@@ -116,6 +116,10 @@
 				<string>UIImageView</string>
 				<key>accessoryView</key>
 				<string>arrow_right</string>
+				<key>targetVC</key>
+				<string>MDAboutController</string>
+				<key>targetPlist</key>
+				<string>about</string>
 			</dict>
 		</array>
 		<key>header</key>

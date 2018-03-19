@@ -44,6 +44,10 @@
 		04EEA67F205CC97300E0DB0A /* MDMyLotteryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEA67E205CC97300E0DB0A /* MDMyLotteryController.swift */; };
 		04F77171205F45C100F5CBDA /* pushScore.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F77170205F45C100F5CBDA /* pushScore.plist */; };
 		04F77174205F4DBD00F5CBDA /* MDLiveSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77173205F4DBD00F5CBDA /* MDLiveSettingController.swift */; };
+		04F77176205F652700F5CBDA /* about.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F77175205F652700F5CBDA /* about.plist */; };
+		04F77178205F666E00F5CBDA /* MDAboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F77177205F666E00F5CBDA /* MDAboutController.swift */; };
+		04F7717A205F672E00F5CBDA /* AboutHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F77179205F672E00F5CBDA /* AboutHeaderView.xib */; };
+		04F7717C205F679800F5CBDA /* MDAboutHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7717B205F679800F5CBDA /* MDAboutHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		04EEA67E205CC97300E0DB0A /* MDMyLotteryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMyLotteryController.swift; sourceTree = "<group>"; };
 		04F77170205F45C100F5CBDA /* pushScore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pushScore.plist; sourceTree = "<group>"; };
 		04F77173205F4DBD00F5CBDA /* MDLiveSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDLiveSettingController.swift; sourceTree = "<group>"; };
+		04F77175205F652700F5CBDA /* about.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = about.plist; sourceTree = "<group>"; };
+		04F77177205F666E00F5CBDA /* MDAboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDAboutController.swift; sourceTree = "<group>"; };
+		04F77179205F672E00F5CBDA /* AboutHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutHeaderView.xib; sourceTree = "<group>"; };
+		04F7717B205F679800F5CBDA /* MDAboutHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDAboutHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +430,7 @@
 		04860C5A205B67F7007F8B96 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				04F77175205F652700F5CBDA /* about.plist */,
 				04F77170205F45C100F5CBDA /* pushScore.plist */,
 				04536CA2205E99A0009F25FB /* pushLottery.plist */,
 				0474707A205E3FFA00887072 /* setting.plist */,
@@ -435,6 +444,8 @@
 			children = (
 				04860C5C205B67F7007F8B96 /* MyLottery.storyboard */,
 				0434F78B205F39F3008F53C5 /* MDSettingTableViewCell.swift */,
+				04F77179205F672E00F5CBDA /* AboutHeaderView.xib */,
+				04F7717B205F679800F5CBDA /* MDAboutHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -444,6 +455,7 @@
 			children = (
 				0474707C205E5B2B00887072 /* MDRedeemCodeController.swift */,
 				04F77173205F4DBD00F5CBDA /* MDLiveSettingController.swift */,
+				04F77177205F666E00F5CBDA /* MDAboutController.swift */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -519,7 +531,9 @@
 				0474707B205E3FFA00887072 /* setting.plist in Resources */,
 				04860C64205B67F7007F8B96 /* History.storyboard in Resources */,
 				040A7C5120590BB00037E17A /* LaunchScreen.storyboard in Resources */,
+				04F7717A205F672E00F5CBDA /* AboutHeaderView.xib in Resources */,
 				04860C63205B67F7007F8B96 /* View.xib in Resources */,
+				04F77176205F652700F5CBDA /* about.plist in Resources */,
 				04860C5E205B67F7007F8B96 /* Arena.storyboard in Resources */,
 				04536CA3205E99A1009F25FB /* pushLottery.plist in Resources */,
 				04860C67205B67F7007F8B96 /* MyLottery.storyboard in Resources */,
@@ -554,6 +568,8 @@
 				04860C70205B9383007F8B96 /* MDNavigationController.swift in Sources */,
 				04860C76205BA647007F8B96 /* PCH.swift in Sources */,
 				04F77174205F4DBD00F5CBDA /* MDLiveSettingController.swift in Sources */,
+				04F77178205F666E00F5CBDA /* MDAboutController.swift in Sources */,
+				04F7717C205F679800F5CBDA /* MDAboutHeaderView.swift in Sources */,
 				04860C78205BAF6A007F8B96 /* MDActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
