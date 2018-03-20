@@ -88,6 +88,17 @@ class MDGuideController: UICollectionViewController {
         //添加到collectionView上
         collectionView?.addSubview(startBtn)
         
+        //监听按钮点击事件
+        startBtn.addTarget(self, action: #selector(self.startBtnDidClicked), for: .touchUpInside)
+    }
+    
+    @objc private func startBtnDidClicked() {
+        //替换根控制器
+        
+        //1.获取主窗口
+        let keyWindow = UIApplication.shared.keyWindow
+        //设置根控制器
+        keyWindow?.rootViewController = MDTabBarViewController()
     }
     
     private func configStyle() {
