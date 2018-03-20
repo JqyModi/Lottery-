@@ -20,12 +20,17 @@ class MDGuideController: UICollectionViewController {
     var largeTextImageV: UIImageView?
     var smallTextImageV: UIImageView?
     
+    var page: CGFloat = 0
+    
     init() {
         let layout = UICollectionViewFlowLayout()
         //设置布局属性
         //每页大小等于屏幕大小
         layout.itemSize = screenBounds.size
+//        layout.itemSize = CGSize(width: 375, height: 600)
         debugPrint("itemSize  --->   \(layout.itemSize)")
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
         //设置滚动方向
         layout.scrollDirection = .horizontal
         
@@ -70,6 +75,19 @@ class MDGuideController: UICollectionViewController {
         //设置位置
         largeTextImageV.y = screenHeight * 0.75
         smallTextImageV.y = screenHeight * 0.85
+        
+        //设置开始体验按钮位置
+        let startBtn = UIButton()
+//        startBtn.setTitle("开始体验", for: .normal)
+        startBtn.setBackgroundImage(UIImage(named: "guideStart"), for: .normal)
+        //设置大小
+        startBtn.sizeToFit()
+        //设置位置
+        let x = 3.5 * screenWidth
+        startBtn.center = CGPoint(x: x, y: screenHeight * 0.93)
+        //添加到collectionView上
+        collectionView?.addSubview(startBtn)
+        
     }
     
     private func configStyle() {
@@ -109,13 +127,48 @@ class MDGuideController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
 
     // MARK: UIScrollViewDelegate
-    override func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        //开始减速时将图片偏移量改变为当前Cell偏移的offset
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        //减速时将图片偏移量改变为当前Cell偏移的offset
+        
+        //滚动之前更改对应图片
+        let offsetX = scrollView.contentOffset.x
+        let page = offsetX / screenWidth
+        debugPrint("page ---> \(page)")
+        //获取图片
+        let largeImage = UIImage(named: "guide\(page+1)")
+        let largeTextImage = UIImage(named: "guideLargeText\(page+1)")
+        let smallTextImage = UIImage(named: "guideSmallText\(page+1)")
+        
+        self.largeImageV?.image = largeImage
+        self.largeTextImageV?.image = largeTextImage
+        self.smallTextImageV?.image = smallTextImage
+        
+        //设置图片滑动方向跟手势滑动方向一致：改变x来实现
+        if self.page > page {
+            //从左往右
+            debugPrint("123")
+            self.largeImageV?.x = scrollView.contentOffset.x - page * screenWidth
+            self.largeTextImageV?.x = scrollView.contentOffset.x - page * screenWidth
+            self.smallTextImageV?.x = scrollView.contentOffset.x - page * screenWidth
+        }else {
+            //从右往左
+            debugPrint("321")
+            self.largeImageV?.x = scrollView.contentOffset.x + page * screenWidth
+            self.largeTextImageV?.x = scrollView.contentOffset.x + page * screenWidth
+            self.smallTextImageV?.x = scrollView.contentOffset.x + page * screenWidth
+        }
+        
+        self.page = page
         
         //1.获取View：通过引用获取
         //2.改变x = offset
-        self.largeImageV?.x = scrollView.contentOffset.x
-        self.largeTextImageV?.x = scrollView.contentOffset.x
-        self.smallTextImageV?.x = scrollView.contentOffset.x
+        //以动画方式移动
+        UIView.animate(withDuration: 0.25) {
+            self.largeImageV?.x = scrollView.contentOffset.x
+            self.largeTextImageV?.x = scrollView.contentOffset.x
+            self.smallTextImageV?.x = scrollView.contentOffset.x
+        }
+        
     }
+    
 }
