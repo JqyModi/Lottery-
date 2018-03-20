@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //选择要加载的控制器：主页/新特性页
     private func selectCurrentController() -> UIViewController {
-        if !(loadCurrentAppVersion() == loadAppVersion()) {
+        if (loadCurrentAppVersion() == loadAppVersion()) {
             debugPrint("MDTabBarViewController")
             return MDTabBarViewController()
         }else {

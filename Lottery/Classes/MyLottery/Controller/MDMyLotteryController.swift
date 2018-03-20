@@ -22,7 +22,20 @@ class MDMyLotteryController: UIViewController {
         //设置标题
         setting.title = "设置"
         setting.plistName = "setting"
+        
+        //设置setting界面的右上角按钮
+        let rightItem = UIBarButtonItem(title: "常见问题", style: .plain, target: self, action: #selector(self.rightItemDidClicked))
+        setting.navigationItem.rightBarButtonItem = rightItem
+        
         self.navigationController?.pushViewController(setting, animated: true)
+    }
+    
+    @objc private func rightItemDidClicked() {
+        //跳转到常见问题界面
+        let help = MDHelpController()
+        //设置标题
+        help.title = "常见问题"
+        self.navigationController?.pushViewController(help, animated: true)
     }
     
     private func setLoginBtnBg() {
