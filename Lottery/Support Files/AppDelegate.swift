@@ -98,6 +98,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        //处理通过URL方式打开本应用的操作
+        debugPrint("url ----> \(url)")
+        return true
+    }
+    
 }
 
